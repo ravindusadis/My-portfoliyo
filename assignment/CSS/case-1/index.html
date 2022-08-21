@@ -20,25 +20,51 @@
             background: red;
         }
         main>section:nth-child(2){
-            background: yellow;
             background: green;
-        }
-        main>section:nth-child(3){
-            background: green;
-            background: orange;
             position: absolute;
             right: 0;
             top: 0;
         }
+        main>section:nth-child(3){
+            background: orange;
+            position: absolute;
+            right: 0;
+            top: 0;
+            left: 0;
+            bottom: 0
+        }
         main>section:last-child{
+        main>section:nth-child(4){
             background: deeppink;
             position: absolute;
             right: 0;
             bottom: 0;
         }
+        main>div:first-of-type{
+            position: absolute;
+            width: 230px;
+            height: 230px;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            top: 0;
+            margin: auto;
+            border: 1px solid white;
+            background: white;
+        }
+
+
+
+
         </style>
           </head>
             <body>
+                      @@ -45,6 +63,8 @@
+        <section></section>
+                   <section></section>
+                              <section></section>
+
+                                         <div></div>
             <main>
             <section></section>
                        <section></section>
