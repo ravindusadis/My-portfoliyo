@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <title>Simple Web Layout</title>
     <link rel="stylesheet" href="/assignment/CSS/normalize.css">
-    <link rel="icon" href="/assignment/CSS/case-2/assets/image/gif.gif">
-    <link rel="icon" href="/assignment/CSS/case-2/assets/image/favicon.png">
+    <link rel="icon" href="assets/image/favicon.png">
     <meta content="width=device-width initial-scale=1" name="viewport">
     <link rel="stylesheet" href="/assests/CSS/css/all.min.css">
 
@@ -100,6 +99,34 @@
         padding-right: 20px;
         font-size: 20px;
     }
+    main > section > section:first-child > div {
+        height: 100%;
+        width: calc(100% / 3);
+        position: absolute;
+        border: 1px solid rgba(0, 0, 0, 0.33);
+    }
+
+    main > section > section:first-child {
+        height: 300px;
+        position: relative;
+        margin-top: 10px;
+    }
+
+    main > section > section:first-child > div:nth-child(1) {
+        background: url("assets/image/gif.gif");
+        left: 0;
+    }
+
+    main > section > section:first-child > div:nth-child(2) {
+        background: url("assets/image/gif.gif");
+        left: calc(100%/3);
+    }
+
+    main > section > section:first-child > div:nth-child(3) {
+        background: url("assets/image/gif.gif");
+        right: 0;
+    }
+
 
 
 </style>
@@ -107,7 +134,7 @@
 </head>
 <body>
 <header>
-    <img src="/assignment/CSS/case-2/assets/image/favicon.png" alt="image">
+    <img src="assets/image/favicon.png">
     <nav>
         <ul>
             <li><a href="#">Home</a></li>
@@ -116,8 +143,6 @@
             <li><a href="#">About Us</a></li>
         </ul>
     </nav>
-
-
 </header>
 
 <main>
