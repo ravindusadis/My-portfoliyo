@@ -3,6 +3,85 @@
 <head>
   <meta charset="UTF-8">
   <title>CSS Sticky Position</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    body{
+      height: auto;
+      width: 100%;
+    }
+    body div{
+      position: absolute;
+      width: 100%;
+      height: auto;
+    }
+    body>div>div:first-child{
+      background: white;
+      position: sticky;
+      top: 0;
+      width: 100%;
+      height: 100vh;
+    }
+    body>div>div:nth-child(2){
+      background: dodgerblue;
+      position: sticky;
+      top: 0;
+      width: 100%;
+      height: 100vh;
+    }
+    body>div>div:nth-child(3){
+      background: #858585FF;
+      position: sticky;
+      top: 0;
+      width: 100%;
+      height: 100vh;
+    }
+    body>div>div:last-child{
+      background: #ff253a;
+      position: sticky;
+      top: 0;
+      width: 100%;
+      height: 100vh;
+    }
+    body>div>div:first-child>div{
+      width: 100%;
+      height: 80px;
+      background: #ff253a;
+    }
+    body>div>div:nth-child(2)>div{
+      width: 100%;
+      height: 80px;
+      background: blue;
+    }
+    body>div>div:nth-child(3)>div{
+      width: 100%;
+      height: 80px;
+      background: dimgray;
+    }
+    body>div>div:last-child>div{
+      width: 100%;
+      height: 80px;
+      background: brown;
+    }
+    body>div>div:first-child>div>h1,  body>div>div:nth-child(2)>div>h1, body>div>div:nth-child(3)>div>h1,  body>div>div:last-child>div>h1{
+      color: white;
+      font-size: 40px;
+      margin-top: 15px;
+      margin-left: 15px;
+    }
+    body>div>div:first-child>h1, body>div>div:nth-child(2)>h1, body>div>div:nth-child(3)>h1, body>div>div:last-child>h1{
+      font-size: 200px;
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+  </style>
 </head>
 <body>
 <div>
