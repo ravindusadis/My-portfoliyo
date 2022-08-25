@@ -2,159 +2,160 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Simple Web Layout</title>
-    <link rel="stylesheet" href="/assignment/CSS/normalize.css">
-    <link rel="icon" href="assets/image/favicon.png">
+    <title>Basic Web Layout</title>
+    <link href=/assignment/CSS/normalize.css rel="stylesheet">
     <meta content="width=device-width initial-scale=1" name="viewport">
-    <link rel="stylesheet" href="/assests/CSS/css/all.min.css">
+    <link href="assets/image/favicon.png" rel="icon">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link href="/assests/CSS/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+        header {
+            background: white;
+            box-shadow: 0px -1px 8px 2px #1c1717e8;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            height: 73px;
+            z-index: 2;
+        }
+        header > img {
+            width: 190px;
+            position: relative;
+            top: 20px;
+            left: 10px;
+        }
+        header > nav {
+            position: absolute;
+            right: 40px;
+            top: 0;
+        }
+        header > nav > ul > li {
+            display: inline-block;
+            cursor: pointer;
+            padding: 10px;
+            font-family: 'Poppins', sans-serif;
+            color: rgba(46, 41, 41, 0.96);
+            font-size: 19px;
+            border-right: 2px solid rgba(46, 41, 41, 0.58);
+        }
+        header > nav > ul > li:first-child {
+            border-left: 2px solid rgba(46, 41, 41, 0.58);
+        }
+        main ul > li:hover a {
+            color: #eee309;
+        }
+        main ul > li:hover i {
+            color: #ff9500;
+        }
+        header ul > li:hover a {
+            color: rgba(228, 12, 12, 0.89);
+        }
+        header ul > li:hover i {
+            color: #c21e1e;
+        }
+        main {
+            position: relative;
+            margin-top: 73px;
+        }
+        main > nav {
+            position: absolute;
+            background: #24327f;
+            top: 0;
+            bottom: 0;
+            width: 270px;
+        }
+        main > nav > ul > li {
+            color: white;
+            list-style: none;
+            padding-top: 40px;
+            font-size: 19px;
+            cursor: pointer;
 
-<style>
-    *{
-        font-family: 'poppins',sans-serif;
-    }
-    header {
-        background: white;
-        position: relative;
-        box-shadow:0px -1px 8px 2px #1c1717e8;
-        height: 73px;
-    }
-    header >image{
-        width: 180px;
-        position: relative;
-        top: 20px;
-        left: 10px;
-    }
-    header > nav {
-        position: absolute;
-        top: 0;
-        right: 50px;
-    }
-    header > nav > ul > li{
-        display: inline-block;
-        padding: 10px;
-        cursor: pointer;
-        list-style-type: none;
-        font-size: 20px;
-        font-weight: bold;
-    }
-    header ul>li>i{
-        padding-right: 6px;
-    }
-    header ul>li>a{
-        color: rgba(46, 41, 41, 0.96);
-        text-decoration: none;
+        }
+        header ul > li > i {
+            padding-right: 6px;
+        }
 
-    }
-    header ul>li>a:hover{
-        color: #ff253a ;
-        transition:.4s ;
-    }
+        header ul > li > a {
+            color: rgba(46, 41, 41, 0.96);
+            text-decoration: none;
+        }
 
-    main{
-        position: relative;
-    }
-    main>nav{
-        position: absolute;
-        width: 270px;
-        background: blueviolet;
-        top: 0;
-        bottom: 0;
-    }
-    main>section{
-        margin-left: 300px;
-        padding: 5px;
-    }
-    footer{
-        height: 50px;
-        background: dimgray;
+        main ul > li > i {
+            padding-right: 15px;
+            font-size: 20px;
+            color: #ccffcd;
+        }
 
-    }
-    footer>h4{
-        text-align: center;
-        color: white;
-        padding-top: 10px;
-        margin-top: 0;
-    }
-    main ul > li:hover a {
-        color: #eee309;
-        transform: scale(1.3);
-        transition: .3s;
-    }
-
-    main ul > li:hover i {
-        color: #ff9500;
-        transform: scale(1.3);
-        transition: .3s;
-    }
-    main>nav> ul > li {
-        color: #ccffcd;
-        width: 100%;
-        height: 50px;
-        display: flex;
-        align-items: center;
-        cursor: pointer;
-    }
-
-    main>nav> ul > li > i{
-        padding-right: 20px;
-        font-size: 20px;
-    }
-    main > section > section:first-child > div {
-        height: 100%;
-        width: calc(100% / 3);
-        position: absolute;
-        border: 1px solid rgba(0, 0, 0, 0.33);
-    }
-
-    main > section > section:first-child {
-        height: 300px;
-        position: relative;
-        margin-top: 10px;
-    }
-
-    main > section > section:first-child > div:nth-child(1) {
-        background: url("assets/image/gif.gif");
-        left: 0;
-    }
-
-    main > section > section:first-child > div:nth-child(2) {
-        background: url("assets/image/gif.gif");
-        left: calc(100%/3);
-    }
-
-    main > section > section:first-child > div:nth-child(3) {
-        background: url("assets/image/gif.gif");
-        right: 0;
-    }
-
-
-
-</style>
-
+        main ul > li > a {
+            color: #ccffcd;
+            text-decoration: none;
+        }
+        main > section {
+            margin-left: 270px;
+            padding: 10px;
+        }
+        footer {
+            height: 60px;
+            background: #363030;
+        }
+        footer > h4 {
+            text-align: center;
+            margin-top: 0;
+            padding-top: 20px;
+            color: #e5e5e5;
+            font-weight: lighter;
+        }
+        main > section > section:first-child {
+            height: 300px;
+            position: relative;
+        }
+        main > section > section:first-child > div {
+            height: 100%;
+            width: calc(100% / 3);
+            position: absolute;
+            border: 1px solid rgba(0, 0, 0, 0.33);
+        }
+        main > section > section:first-child > div:nth-child(1) {
+            background: url("assets/image/gif.gif");
+            left: 0;
+        }
+        main > section > section:first-child > div:nth-child(2) {
+            background: url("assets/image/gif.gif");
+            left: calc(100%/3);
+        }
+        main > section > section:first-child > div:nth-child(3) {
+            background: url("assets/image/gif.gif");
+            right: 0;
+        }
+    </style>
 </head>
 <body>
 <header>
-    <img src="assets/image/favicon.png">
+    <img alt="Logo" src="assets/image/favicon.png">
     <nav>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">About Us</a></li>
+            <li><i class="fa-solid fa-house"></i><a href="https://ijse.lk" target="_blank">Home</a></li>
+            <li><i class="fa-solid fa-earth-asia"></i><a href="#">Services</a></li>
+            <li><i class="fa-solid fa-headphones-simple"></i><a href="#">Contact</a></li>
+            <li><i class="fa-solid fa-address-card"></i><a href="#">About Us</a></li>
         </ul>
     </nav>
 </header>
-
 <main>
     <nav>
         <ul>
-            <li><i class="fa-solid fa-house"></i><a>Home</a></li>
-            <li><i class="fa-solid fa-compact-disc"></i><a>Services</a></li>
-            <li><i class="fa-solid fa-headphones-simple"></i><a>Contact</a></li>
-            <li><i class="fa-solid fa-address-card"></i><a>About Us</a></li>
+            <li><i class="fa-solid fa-house"></i><a href="https://ijse.lk" target="_blank">Home</a></li>
+            <li><i class="fa-solid fa-earth-asia"></i><a href="#">Services</a></li>
+            <li><i class="fa-solid fa-headphones-simple"></i><a href="#">Contact</a></li>
+            <li><i class="fa-solid fa-address-card"></i><a href="#">About Us</a></li>
         </ul>
     </nav>
-
     <section>
         <section>
             <div></div>
@@ -195,57 +196,11 @@
             <p>Amet architecto blanditiis, culpa cum eos eum facere fugiat harum, id iste libero modi molestiae
                 necessitatibus nobis nulla pariatur qui quia quibusdam quis quisquam veniam voluptas voluptatum!
                 Ducimus, numquam quam.</p>
-            <p>A accusantium adipisci aliquid aspernatur atque, blanditiis cupiditate dicta distinctio dolorem eaque
-                eos, est ex fuga ipsa maiores nam necessitatibus odit perspiciatis quas quidem ratione sed similique,
-                sint vitae voluptas.</p>
-            <p>Amet architecto blanditiis, culpa cum eos eum facere fugiat harum, id iste libero modi molestiae
-                necessitatibus nobis nulla pariatur qui quia quibusdam quis quisquam veniam voluptas voluptatum!
-                Ducimus, numquam quam.</p>
-            <p>A accusantium adipisci aliquid aspernatur atque, blanditiis cupiditate dicta distinctio dolorem eaque
-                eos, est ex fuga ipsa maiores nam necessitatibus odit perspiciatis quas quidem ratione sed similique,
-                sint vitae voluptas.</p>
-            <p>A accusantium adipisci aliquid aspernatur atque, blanditiis cupiditate dicta distinctio dolorem eaque
-                eos, est ex fuga ipsa maiores nam necessitatibus odit perspiciatis quas quidem ratione sed similique,
-                sint vitae voluptas.</p>
-            <p>Amet architecto blanditiis, culpa cum eos eum facere fugiat harum, id iste libero modi molestiae
-                necessitatibus nobis nulla pariatur qui quia quibusdam quis quisquam veniam voluptas voluptatum!
-                Ducimus, numquam quam.</p>
-            <p>A accusantium adipisci aliquid aspernatur atque, blanditiis cupiditate dicta distinctio dolorem eaque
-                eos, est ex fuga ipsa maiores nam necessitatibus odit perspiciatis quas quidem ratione sed similique,
-                sint vitae voluptas.</p>
-            <p>A accusantium adipisci aliquid aspernatur atque, blanditiis cupiditate dicta distinctio dolorem eaque
-                eos, est ex fuga ipsa maiores nam necessitatibus odit perspiciatis quas quidem ratione sed similique,
-                sint vitae voluptas.</p>
-            <p>Amet architecto blanditiis, culpa cum eos eum facere fugiat harum, id iste libero modi molestiae
-                necessitatibus nobis nulla pariatur qui quia quibusdam quis quisquam veniam voluptas voluptatum!
-                Ducimus, numquam quam.</p>
-            <p>A accusantium adipisci aliquid aspernatur atque, blanditiis cupiditate dicta distinctio dolorem eaque
-                eos, est ex fuga ipsa maiores nam necessitatibus odit perspiciatis quas quidem ratione sed similique,
-                sint vitae voluptas.</p>
-            <p>A accusantium adipisci aliquid aspernatur atque, blanditiis cupiditate dicta distinctio dolorem eaque
-                eos, est ex fuga ipsa maiores nam necessitatibus odit perspiciatis quas quidem ratione sed similique,
-                sint vitae voluptas.</p>
-            <p>Amet architecto blanditiis, culpa cum eos eum facere fugiat harum, id iste libero modi molestiae
-                necessitatibus nobis nulla pariatur qui quia quibusdam quis quisquam veniam voluptas voluptatum!
-                Ducimus, numquam quam.</p>
-            <p>A accusantium adipisci aliquid aspernatur atque, blanditiis cupiditate dicta distinctio dolorem eaque
-                eos, est ex fuga ipsa maiores nam necessitatibus odit perspiciatis quas quidem ratione sed similique,
-                sint vitae voluptas.</p>
-            <p>Consequatur, fuga inventore magnam minus provident quas qui quis quos reiciendis reprehenderit, rerum
-                saepe ut veritatis! Architecto, aut consequatur delectus doloribus earum fugit natus possimus qui sed ut
-                velit voluptatum.</p>
-            <p>Aliquid commodi consectetur consequuntur corporis cupiditate debitis, dicta dolor dolore dolorum ducimus
-                eaque, eum harum in iure mollitia non numquam omnis provident qui saepe sint suscipit ullam veniam vitae
-                voluptates.</p>
-
         </section>
     </section>
 </main>
-
-
 <footer>
-    <h4>Developed By IJSE</h4>
+    <h4>Developed By IJSE @ 2022</h4>
 </footer>
-
 </body>
 </html>
