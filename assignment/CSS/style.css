@@ -1,0 +1,50 @@
+* {
+    font-family: 'Inter', Inter;
+    padding: 0;
+    margin: 0;
+}
+header {
+    background:#3E3939;
+    position: relative;
+    box-shadow: 0px -1px 8px 2px #1c1717e8;
+    height: 73px;
+    width: 100%;
+}
+header > img {
+    width: 180px;
+    position: relative;
+    top: 20px;
+    left: 10px;
+}
+ nav {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding-top: 10px;
+     padding-left: 30%;
+}
+
+header > nav > ul > li {
+    display: inline-block;
+    padding: 10px;
+    cursor: pointer;
+    list-style-type: none;
+    font-size: 20px;
+    font-weight: normal;
+
+}
+header ul>li>i{
+    padding-right: 6px;
+}
+
+header ul>li>a{
+    color: white;
+    text-decoration: none;
+}
+
+header ul>li>a:hover{
+    color: #ff253a;
+    transition: .4s;
+}
+
+
