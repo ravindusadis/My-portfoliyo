@@ -11,7 +11,7 @@ header{
     width: 100%;
     top: 0;
     height:  65px;
-    /*z-index: 2;*/
+    z-index: 2;
 }
 nav {
     display: flex;
@@ -41,14 +41,14 @@ nav>ul>li>a:hover{
     width: 400px;
     height: 400px;
     position: absolute;
-    right: 80px;
-    top: 70px;
+    right: 130px;
+    top: 180px;
     border-radius: 50%;
 }
 .hero {
     position: absolute;
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     background: #1E1E1E;
     margin-top:65px;
 }
@@ -57,39 +57,40 @@ nav>ul>li>a:hover{
     height: 500px;
     background: #1E1E1E;
     position: absolute;
-    top: 0;
+    top: 30%;
     left:0;
 }
 .main-box h3:first-child{
     position: absolute;
-    top: 10%;
-    left: 8%;
+    top: 0;
+    left: 35%;
     font-size: 40px;
-    color: #43270E;
+    color: #FB3C00;
 
 }
 .main-box h2{
     position: absolute;
-    top:30%;
+    top:20%;
     left: 16%;
     font-size: 50px;
     font-weight: bold;
-    color: #43270E;
+    color: #FFFFFF;
 
 }
 .main-box h3:last-child{
     position: absolute;
-    top: 50%;
-    right: 20%;
+    top: 35%;
+    right: 24%;
     font-size: 30px;
     font-weight: lighter;
-    color: #43270E;
+    color: #00FFC2;
 
 }
 .hero aside{
     position: absolute;
-    bottom: 30%;
-    right: 10%;
+    bottom: 8%;
+    bottom: 20%;
+    left: 6%;
 
 }
 .hero aside i{
@@ -102,8 +103,9 @@ nav>ul>li>a:hover{
     transition: .3s;
 }
 .hero aside h4 {
-    font-size: 30px;
-    margin: 0px 130px;
+    font-size: 20px;
+    margin: 15px 180px;
+    color: #FF1717;
 }
 main>section:nth-child(1){
     background: red;
