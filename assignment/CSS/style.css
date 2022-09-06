@@ -6,6 +6,7 @@
 }
 
 header{
+    position: fixed;
     background: radial-gradient(103.61% 31187.11% at 100% 32.53%, rgba(60, 62, 57, 0) 0%, rgba(62, 57, 57, 0.237361) 0%, rgba(0, 0, 0, 0.4) 4.75%);
     width: 100%;
     top: 0;
@@ -46,7 +47,6 @@ nav>ul>li>a:hover{
     width: 100%;
     height: 80vh;
     background: #1E1E1E;
-    margin-top:65px;
 }
 
 .main-box h3:first-child{
@@ -67,6 +67,7 @@ nav>ul>li>a:hover{
     top: 30%;
     left: 5%;
     font-size: 75px;
+    color: white;
 
 }
 .main-box h3:last-child{
@@ -147,8 +148,8 @@ nav>ul>li>a:hover{
     margin-bottom: 50px;
 }
 
-.about-text button{
-    background-color:#960075;
+.about-text button {
+    background-color: #960075;
     color: white;
     text-decoration: none;
     border: 2px solid transparent;
@@ -157,18 +158,98 @@ nav>ul>li>a:hover{
     border-radius: 30px;
     transition: .4s;
 }
+
 .name-box{
     width: 500px;
     height: 200px;
-    background: linear-gradient(180deg, #EB9C3F 0%, rgba(239, 227, 213, 0) 100%);
-    margin-left: 120px;
+    background: radial-gradient(172.82% 172.82% at 53.68% 76.7%, #920000 1.94%, rgba(217, 217, 217, 0) 96.65%, rgba(255, 255, 255, 0.939796) 97.08%);
+    margin-left: 150px;
+    margin-top: 40px;
+    filter: drop-shadow(0px 4px 90px rgba(0, 0, 0, 0.25));
+
 }
 tr td:first-child{
     padding-right: 20px;
 
 }
 tr td{
-    padding-top: 50px;
+    padding-top: 28px;
     font-size: 20px;
+    color: white;
 }
+.myskills-text h2{
+    color: white;
+    font-size: 50px;
+    width: 1130px;
+    margin: 10px auto;
+    text-align: center;
+    padding-bottom: 50px;
+}
+.skill{
+    width: 100%;
+    padding: 100px 0px;
+    background: black;
 
+}
+.skill section:nth-child(2){
+    width: 900px;
+    height: 400px;
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-columns:repeat(4,1fr);
+    gap: 50px;
+}
+.skill section:nth-child(2) div{
+
+    background: linear-gradient(180deg, #790066 0%, rgba(124, 98, 67, 0) 100%);
+}
+.skill-deatail img{
+    width: 40px;
+    height: 40px;
+    position: relative;
+    left: 30px;
+    right: 0;
+    top: 50px;
+    bottom: 0;
+    margin: auto;
+
+}
+.skill-deatail div h4{
+    position: relative;
+    width: 70px;
+    height: 30px;
+    left:60px;
+    top: 20px;
+    font-size: 20px;
+    color: white;
+
+
+}
+.skill-deatail div h5{
+    position: relative;
+    left:80px;
+    top: 20px;
+    font-size: 20px;
+    color: white;
+}
+.button-read .button{
+    background-color: #960075;
+    color:white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 13px 30px;
+    border-radius: 50px;
+    margin-left: 600px;
+    margin-bottom: 30px;
+    top: 54px;
+    position: relative;
+
+
+}
