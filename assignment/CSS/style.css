@@ -253,3 +253,35 @@ tr td{
 
 
 }
+.tools-image h4{
+    color: white;
+    font-size: 25px;
+    width: 1130px;
+    margin: 10px auto;
+    text-align: center;
+    padding-bottom: 30px;
+}
+.tools {
+    width: 100%;
+    padding: 100px 0px;
+    background: black;
+}
+.tools-box{
+    border-radius: 50px;
+    margin: 50px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+
+}
+.tools-box img{
+    width: 5%;
+    height: 5%;
+    margin: 30px 20px;
+    transition: transform .4s;
+
+}
+
+.tools-box img:hover{
+    transform: scale(2);
+}
