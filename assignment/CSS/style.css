@@ -341,3 +341,8 @@ tr td{
 .edu-box3{
     align-self: center;
 }
+/*-----------service-------*/
+.service{
+    padding: 30px 0;
+    background: black;
+}
