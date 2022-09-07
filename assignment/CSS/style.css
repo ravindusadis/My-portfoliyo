@@ -346,3 +346,11 @@ tr td{
     padding: 30px 0;
     background: black;
 }
+.title{
+    color: white;
+    font-size: 50px;
+    width: 1130px;
+    margin: 10px auto;
+    text-align: center;
+    padding-bottom: 50px;
+}
