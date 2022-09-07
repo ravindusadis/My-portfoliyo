@@ -390,3 +390,11 @@ tr td{
     font-family: Ubuntu;
     font-style: normal;
 }
+.project-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+
+
+}
