@@ -398,3 +398,16 @@ tr td{
 
 
 }
+.pro{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.pro img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+
+
+}
+
