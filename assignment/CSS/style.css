@@ -602,6 +602,7 @@ form input,form textarea{
 .social-i{
     margin-top: 20px;
     text-align: center;
+    margin-bottom: 50px;
 }
 .social-i a{
     text-decoration: none;
@@ -616,3 +617,29 @@ form input,form textarea{
     color: #ff004f;
     transform: translateY(-5px);
 }
+footer{
+    position: relative;
+    width: 100%;
+    height: 70px;
+    background: #1E1E1E;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+footer p:nth-child(1){
+    font-size: 20px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+footer p:nth-child(2){
+    color: white;
+    font-size: 25px;
+    width: 1200px;
+    text-align: center;
+    line-height: 26px;
+}
+
