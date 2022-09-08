@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animation-case03</title>
+    <meta content="width=device-width initial-scale=1" name="viewport">
+    <link href="/assignment/CSS/normalize.css" rel="stylesheet">
+    <link href="/assets/fonts/css/all.min.css" rel="stylesheet">
+    <style>
+        main {
+            width: 900px;
+            height: 480px;
+            box-shadow: 1px 3px 5px 1px #736060;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        main > section {
+            height: 100%;
+            width: 400%;
+            display: flex;
+            animation-name: slider-animation;
+            animation-duration: 10s;
+            animation-iteration-count: 1;
+            animation-timing-function: linear;
+        }
+
+        main > section > div {
+            height: 100%;
+            width: 100%;
+        }
+
+        main > section > div:nth-child(1) {
+            background: url("image/best-fantasy-movies-ddfb.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        main > section > div:nth-child(2) {
+            background: url("image/cover-best-fantasy-movie-ever.jpeg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        main > section > div:nth-child(3) {
+            background: url("image/intro-1584539545-e6a9.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        main > section > div:nth-child(4) {
+            background: url("image/Top-Ten-Fantasy-Thumb.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        @keyframes slider-animation {
+            0% {
+                transform: translateX(0);
+            }
+            25% {
+                transform: translateX(-25%);
+            }
+            50% {
+                transform: translateX(-50%);
+            }
+            100% {
+                transform: translateX(-75%);
+            }
+
+        }
+
+
+    </style>
+</head>
+<body>
+
+<main>
+    <section>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+</main>
+
+</body>
+</html>
