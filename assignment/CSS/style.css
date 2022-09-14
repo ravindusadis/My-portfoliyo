@@ -643,3 +643,175 @@ footer p:nth-child(2){
     line-height: 26px;
 }
 
+@media screen and (max-width: 1024px){
+
+    .main-box h2{
+        font-size: 50px;
+    }
+    .about-box img{
+        width: 363px;
+    }
+
+    .about-box{
+        width: 900px;
+    }
+
+    .about-text{
+        width: 500px;
+    }
+
+
+
+
+
+    .name-box{
+        width: 500px;
+
+    }
+    tr td:first-child{
+        padding-right: 20px;
+
+    }
+
+    .myskills-text h2{
+
+        width: 577px;
+
+    }
+
+
+
+
+
+
+    .tools-image h4{
+
+        width: 759px;
+    }
+
+
+
+
+
+    .education-text h2{
+
+        width: 568px;
+
+    }
+    .education-box {
+        width: 900px;
+    }
+
+    .edu-box1, .edu-box2, .edu-box3 {
+
+        width: 450px;
+
+    }
+
+    .edu-box1 {
+        align-self: center;
+    }
+
+    .edu-box3 {
+        align-self: center;
+    }
+
+    /*-----------service-------*/
+    .service {
+        padding: 30px 0;
+        background: black;
+    }
+
+    .title {
+
+        width: 519px;
+    }
+
+
+    .title-r {
+
+        width: 626px;
+
+    }
+
+    .pr {
+
+        width: 960px;
+
+    }
+
+    .ph {
+
+        width: 606px;
+
+    }
+
+
+    .sub-title {
+
+        width: 627px;
+
+    }
+
+    .row {
+        display: flex;
+        grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+        grid-gap: 40px;
+        margin-top: 50px;
+        /* display: grid; */
+    }
+
+    .contact-right {
+        margin-top: 70px;
+        /* width: 697px; */
+        height: 500px;
+        background: black;
+        padding: 40px;
+        font-size: 13px;
+        font-weight: 300;
+    }
+
+
+    .media {
+
+        width: 567px;
+
+    }
+
+
+    footer p:nth-child(2) {
+
+        width: 663px;
+
+    }
+    .hero aside i {
+        font-size: 50px;
+        margin: 22px 30px;
+    }
+    .skill section:nth-child(2) {
+        width: 800px;
+
+    }
+    .main-image img {
+
+        right: 28px;
+        top: 82px;
+
+    }
+    .hero aside i {
+
+        margin: 22px 30px;
+    }
+    .button-read .button {
+
+        margin-left: 444px;
+
+    }
+    form input, form textarea {
+        width: 100%;
+
+        margin: 11px;
+
+    }
+
+}
