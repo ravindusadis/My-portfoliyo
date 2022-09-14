@@ -815,3 +815,121 @@ footer p:nth-child(2){
     }
 
 }
+@media screen and (max-width: 768px){
+    .skill section:nth-child(2) {
+        width: 757px;
+    }
+    .skill-deatail div h5 {
+
+        left: 5px;
+
+        font-size: 10px;
+
+    }
+    .skill-deatail img {
+
+
+        left: 60px;
+
+    }
+    .button-read .button {
+        margin-left: 312px;
+    }
+    .contact-left {
+        text-align: center;
+        width: 332px;
+    }
+    .button-p button {
+
+        padding: 10px;
+
+    }
+    .pr {
+        width: 744px;
+    }
+    .about-text p {
+
+        font-size: 17px;
+
+    }
+    .about-text h2 {
+
+        font-size: 49px;
+
+    }
+    .main-box h3:last-child {
+
+        font-size: 21px;
+
+    }
+    .main-box h2 {
+        font-size: 39px;
+    }
+    .main-box h3:first-child {
+
+        font-size: 33px;
+
+    }
+    .hero aside i {
+        margin: 22px 15px;
+    }
+    .hero aside i {
+        font-size: 44px;
+    }
+    .hero aside h4 {
+        font-size: 19px;
+        margin: 21px 138px;
+    }
+    nav {
+        padding-top: 12px;
+        padding-left: 15%;
+    }
+    nav>ul>li {
+
+        padding: 12px;
+        font-size:17px;
+    }
+    .main-image img {
+        width: 284px;
+        height: 274px;
+
+    }
+    .about-box img {
+        width: 371px;
+        margin-right: 10px;
+    }
+    .name-box {
+        width: 419px;
+    }
+    .name-box {
+
+        margin-left: 18px;
+
+    }
+    .skill-deatail div h4 {
+
+        left: 42px;
+
+    }
+    .sub-title {
+        width: 759px;
+    }
+    .media {
+
+        font-size: 22px;
+
+    }
+    footer p:nth-child(1) {
+        font-size: 16px;
+
+    }
+    footer p:nth-child(2) {
+
+        font-size: 18px;
+
+    }
+
+
+
+
+}
