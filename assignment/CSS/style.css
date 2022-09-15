@@ -933,3 +933,214 @@ footer p:nth-child(2){
 
 
 }
+@media screen and (max-width: 425px){
+    .media {
+        font-size: 15px;
+    }
+    .media {
+        width: 369px;
+    }
+    .sub-title {
+        width: 394px;
+    }
+    .ph {
+        font-size: 13px;
+    }
+    .ph {
+        width: 401px;
+    }
+    .pr {
+        width: 402px;
+    }
+    .pr {
+        font-size: 13px;
+
+    }
+    .title-r {
+        width: 388px;
+    }
+    .title-r {
+
+        font-size: 17px;
+    }
+    .education-text h2 {
+        width: 396px;
+    }
+    .education-text h2 {
+
+        font-size: 25px;
+
+    }
+    .edu-box1, .edu-box2, .edu-box3 {
+        width: 83px;
+    }
+    .title {
+        width: 385px;
+        font-size: 30px;
+    }
+    .tools-image h4 {
+        width: 401px;
+    }
+    .tools-image h4 {
+
+        font-size: 21px;
+
+    }
+    .button-read .button {
+        margin-left: 155px;
+    }
+    .button-read .button {
+
+        padding: 7px 18px;
+
+    }
+    .skill section:nth-child(2) {
+        width: 227px;
+    }
+    .skill section:nth-child(2) {
+        width: 454px;
+        height: 678px;
+        margin: auto;
+        display: grid;
+        grid-template-rows: repeat(4,1fr);
+        gap: 2px;
+        grid-template-columns: repeat(auto-fit,minmax(226px, 1fr));
+        align-content: center;
+        margin-left: -28px;
+    }
+    .myskills-text h2 {
+        width: 420px;
+    }
+    .myskills-text h2 {
+
+        font-size: 30px;
+
+    }
+    .contact-left {
+
+        width: 412px;
+    }
+
+    .btn.btn2 {
+
+        margin-left: 116px;
+
+    }
+    .contact-right {
+
+        width: 424px;
+
+    }
+    .row {
+
+        display: grid;
+        grid-gap: 2px;
+    }
+    .contact-right form {
+        /* FONT-WEIGHT: 100; */
+        width: 82%;
+        margin-left: 19px;
+    }
+    .about {
+
+        padding: 45px 28px;
+
+    }
+    .about-box {
+
+
+        display: inline;
+
+        /* justify-content: space-around; */
+    }
+    .about-text {
+        width: 370px;
+    }
+    .name-box {
+        margin-left: -26px;
+    }
+    nav>ul>li {
+        padding: 5px;
+        font-size: 13px;
+    }
+
+    .skill section:nth-child(2){
+        width: 900px;
+        height: 400px;
+        position: relative;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        display: grid;
+        grid-template-rows: repeat(2,1fr);
+        grid-template-columns:repeat(4,1fr);
+        gap: 50px;
+    }
+
+
+    .skill-deatail div h5 {
+        left: -66px;
+
+    }
+    .skill-deatail div h4 {
+        left: -41px;
+    }
+    footer p:nth-child(2) {
+        width: 425px;
+    }
+    .skill section:nth-child(2) {
+        width: 421px;
+
+        gap: 10px;
+    }
+    .skill-deatail div h4 {
+        left: 7px;
+    }
+    .skill-deatail div h4 {
+
+
+        font-size: 16px;
+
+    }
+    .skill-deatail img {
+        left: 25px;
+    }
+    .skill-deatail img {
+
+        top: 19px;
+
+    }
+    .skill-deatail div h5 {
+        left: 2px;
+    }
+    .skill-deatail div h5 {
+
+        top: 38px;
+
+    }
+    .education-box{
+        width: 1200px;
+        height: 500px;
+        max-width: 95%;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .edu-box1, .edu-box2, .edu-box3 {
+
+        width: 450px;
+
+
+        margin: 7px;
+
+        font-size: 10px;
+    }
+
+}
