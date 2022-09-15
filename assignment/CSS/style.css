@@ -1275,4 +1275,129 @@ footer p:nth-child(2){
         padding: 18px;
     }
 }
+@media screen and (max-width: 320px){
+    .about-box img {
+        width: 266px;
+
+    }
+    .about-text h2 {
+        font-size: 36px;
+    }
+    .about-text h3 {
+
+        font-size: 20px;
+
+    }
+    .about-text {
+        width: 271px;
+    }
+    tr td {
+
+        font-size: 16px;
+
+    }
+    .name-box {
+        width: 317px;
+    }
+    .about-text button {
+        margin-left: 56px;
+    }
+    .about-text p {
+        font-size: 13px;
+    }
+    .skill section:nth-child(2) {
+        width: 317px;
+        gap: 4px;
+    }
+    .myskills-text h2 {
+        width: 293px;
+    }
+    .skill-deatail div h5 {
+        left: 1px;
+    }
+    .button-read .button {
+        margin-left: 116px;
+    }
+    .tools-image h4 {
+        width: 306px;
+    }
+    .title {
+        width: 299px;
+    }
+    .education-text h2 {
+        width: 302px;
+    }
+    .title-r {
+        width: 306px;
+    }
+    .pr {
+        width: 293px;
+    }
+    .ph {
+        width: 266px;
+    }
+    .button-p button {
+        padding: 5px;
+    }
+    .button-p button {
+        font-size: 11px;
+
+        margin: 63px;
+
+    }
+    .media {
+        width: 309px;
+    }
+    .contact-left {
+        width: 307px;
+    }
+    .contact-right {
+        width: 314px;
+    }
+    .btn.btn2 {
+        margin-left: 52px;
+    }
+    .btn.btn2 {
+
+        height: 31px;
+    }
+    .social-i a {
+
+        font-size: 25px;
+        margin-right: 19px;
+        margin-left: 18px;
+
+    }
+    nav {
+        padding-top: 21px;
+        padding-left: 3%;
+    }
+    .main-image img {
+        right: 69px;
+        top: 67px;
+    }
+    .hero aside i {
+        font-size: 18px;
+    }
+    .main-box h3:first-child {
+
+        left: 32%;
+    }
+    .main-box h2 {
+
+        left: 24%;
+    }
+    .main-box h3:last-child {
+
+        left: 16%;
+
+    }
+    .hero aside h4 {
+        font-size: 14px;
+        margin: 31px 66px;
+        margin-top: -5px;
+        padding: 18px;
+    }
+
+}
 
