@@ -1144,3 +1144,135 @@ footer p:nth-child(2){
     }
 
 }
+@media screen and (max-width: 375px){
+    .about-box img {
+        width: 324px;
+        height: 386px;
+
+    }
+    .name-box {
+        width: 372px;
+    }
+    .about-text {
+        width: 334px;
+    }
+
+    .about-text button {
+
+    margin-left: 84px;
+    }
+    .skill-deatail div h4 {
+        font-size: 13px;
+    }
+    .skill-deatail div h4 {
+        left: 1px;
+    }
+    .skill section:nth-child(2) {
+        width: 366px;
+        gap: 4px;
+    }
+    .myskills-text h2 {
+        width: 351px;
+    }
+    .tools-image h4 {
+        width: 342px;
+    }
+    .tools-box img {
+        width: 9%;
+
+    }
+    .title {
+        width: 367px;
+
+    }
+    .education-text h2 {
+        width: 359px;
+    }
+    .education-box {
+
+        height: 367px;
+
+    }
+    .title-r {
+        width: 345px;
+    }
+    .pr {
+        width: 339px;
+    }
+    .ph {
+        width: 357px;
+    }
+    .contact-left {
+        width: 354px;
+    }
+    .contact-right {
+        width: 375px;
+    }
+    .sub-title {
+        width: 260px;
+    }
+    .btn.btn2 {
+        margin-left: 84px;
+    }
+    footer p:nth-child(2) {
+        width: 300px;
+    }
+    footer p:nth-child(2) {
+        font-size: 14px;
+    }
+    nav>ul>li {
+        padding: 4px;
+        font-size: 11px;
+    }
+    nav {
+        padding-top: 18px;
+        padding-left: 9%;
+    }
+    .main-image img {
+        width: 177px;
+        height: 177px;
+    }
+    .main-image img {
+        right: 94px;
+        top: 69px;
+    }
+    .main-box h3:first-child {
+        font-size: 20px;
+    }
+    .main-box h2 {
+        font-size: 17px;
+    }
+    .main-box h3:first-child {
+
+        top: 47%;
+        left: 34%;
+
+    }
+    .main-box h2 {
+
+        top: 52%;
+        left: 27%;
+
+    }
+    .main-box h3:last-child {
+
+        top: 57%;
+        left: 20%;
+        font-size: 18px;
+
+    }
+    .hero aside i {
+        font-size: 25px;
+    }
+    .hero aside {
+        bottom: 13%;
+        left: 42px;
+    }
+    .hero aside h4 {
+        font-size: 16px;
+        margin: 31px 89px;
+        margin-top: -5px;
+        padding: 18px;
+    }
+}
+
