@@ -1142,6 +1142,41 @@ footer p:nth-child(2){
 
         font-size: 10px;
     }
+    .main-image img {
+        width: 200px;
+        height: 200px;
+    }
+    .main-image img {
+        right: 110px;
+        top: 68px;
+    }
+    .main-box h3:first-child {
+        top: 50%;
+        left: 33%;
+    }
+    .main-box h3:first-child {
+        font-size: 27px;
+    }
+    .main-box h2 {
+        top: 55%;
+        left: 24%;
+    }
+    .main-box h2 {
+        font-size: 23px;
+    }
+    .main-box h3:last-child {
+        font-size: 18px;
+    }
+    .main-box h3:last-child {
+        top: 59%;
+        left: 25%;
+    }
+    .hero aside i {
+        font-size: 24px;
+    }
+    .hero aside i {
+        margin: -32px 25px;
+    }
 
 }
 @media screen and (max-width: 375px){
