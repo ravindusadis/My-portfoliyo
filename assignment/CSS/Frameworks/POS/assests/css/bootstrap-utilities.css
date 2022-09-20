@@ -31,7 +31,7 @@
 }
 
 .text-bg-warning {
-  color: #000 !important;
+  color: white !important;
   background-color: RGBA(255, 193, 7, var(--bs-bg-opacity, 1)) !important;
 }
 
@@ -41,7 +41,7 @@
 }
 
 .text-bg-light {
-  color: #000 !important;
+  color: white!important;
   background-color: RGBA(248, 249, 250, var(--bs-bg-opacity, 1)) !important;
 }
 
