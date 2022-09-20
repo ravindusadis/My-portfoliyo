@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Document Title
+      ============================================= -->
+    <title>POS System</title>
+
+    <!-- Stylesheets
+     ============================================= -->
+    <link rel="stylesheet" href="../assests/fonts/fonts/css/all.min.css">
+    <link rel="stylesheet" href="../assests/css/bootstrap.min.css">
+
+    <!-- Meta tags
+      ============================================= -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <!-- Styles
+      ============================================= -->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+        body{
+            background: black;
+        }
+
+<!--        .customer-head{-->
+<!--            width: 100%;-->
+<!--            margin-top: 10px;-->
+<!--            height: 40px;-->
+<!--            background-color: black;-->
+
+<!--        }-->
+<!--        header{-->
+<!--            width: 100%;-->
+<!--            background-color:black;-->
+<!--        }-->
+
+<!--        .main-section{-->
+<!--            width: 90%;-->
+<!--            height: 80vh;-->
+<!--            margin: auto;-->
+<!--            background-color: black;-->
+<!--        }-->
+<!--        .collapse {-->
+<!--            flex-basis: 100%;-->
+<!--            flex-grow: 1;-->
+<!--            align-items: center;-->
+<!--            justify-content:left;-->
+<!--        }-->
+
+<!--        .collapse a{-->
+<!--            font-size: 20px;-->
+<!--            color: white;-->
+<!--        }-->
+<!--        .collapse a:hover{-->
+<!--            color: #f9004d;-->
+<!--            transition: .4s;-->
+<!--        }-->
+<!--        .breadcrumb {-->
+<!--            margin-left: 20px;-->
+<!--            list-style: none;-->
+<!--            border-radius: 4px;-->
+<!--        }-->
+<!--        .breadcrumb li {-->
+<!--            margin-top: 2px;-->
+<!--            font-size: 45px;-->
+<!--            color: white;-->
+<!--            margin-left: 38%;-->
+<!--        }-->
+<!--        .breadcrumb a{-->
+<!--            text-decoration: none;-->
+<!--            font-size: 20px;-->
+<!--        }-->
+<!--        .back{-->
+<!--            margin-top: 20px;-->
+<!--            margin-left: 20px;-->
+<!--        }-->
+
+<!--        .search{-->
+<!--            display: flex;-->
+<!--            width: 100%;-->
+<!--            margin-top: 20px;-->
+<!--            justify-content: space-between;-->
+<!--        }-->
+
+<!--        .d-flex{-->
+<!--            width: 500px;-->
+<!--            margin-left: 10px;-->
+<!--        }-->
+<!--        .add{-->
+<!--            width: 350px;-->
+<!--        }-->
+<!--        .add button:first-child{-->
+<!--            background-color:#A8ACF6 ;-->
+<!--        }-->
+<!--        .add button:last-child{-->
+<!--            background-color: #A8ACF6 ;-->
+<!--        }-->
+<!--        .add button:first-child:hover{-->
+<!--            background-color:#A8ACF6 ;-->
+<!--        }-->
+<!--        .add button:last-child:hover{-->
+<!--            background-color:#A8ACF6 ;-->
+<!--        }-->
+<!--        .cus-table{-->
+<!--            margin-top: 25px;-->
+<!--            margin-left: 20px;-->
+<!--        }-->
+<!--        .save-cus, .close-cus{-->
+<!--            width: 232px;-->
+<!--        }-->
+
+<!--        tbody tr {-->
+<!--            color: black;-->
+<!--        }-->
+
+<!--    </style>-->
+<!--</head>-->
+<!--<body>-->
+<!--&lt;!&ndash; header-->
+<!--  ============================================= &ndash;&gt;-->
+<!--<header>-->
+<!--    <nav class="navbar navbar-expand-lg">-->
+<!--        <div class="container-fluid">-->
+<!--            <a class="navbar-brand" href="#">-->
+<!--                <img src="../assests/image/market.png" alt="Logo" width="40" height="40" class="d-inline-block align-text-top">-->
+<!--                &lt;!&ndash;                POS System&ndash;&gt;-->
+<!--            </a>-->
+
+<!--            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"-->
+<!--                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--                <span class="navbar-toggler-icon"></span>-->
+<!--            </button>-->
+
+<!--            <div class="collapse navbar-collapse" id="navbarNavDropdown">-->
+<!--                <ul class="navbar-nav justify-content-center">-->
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" aria-current="page" href="#">Home</a>-->
+<!--                    </li>-->
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" href="#">Customers</a>-->
+<!--                    </li>-->
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" href="#">Items</a>-->
+<!--                    </li>-->
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" href="#">Orders</a>-->
+<!--                    </li>-->
+<!--                </ul>-->
+<!--            </div>-->
+<!--            <a class="navbar-brand" href="#">-->
+<!--                <img src="../assests/image/Ellipse%206.png" alt="Logo" width="40" height="40"-->
+<!--                     class="d-inline-block align-text-top">-->
+<!--                &lt;!&ndash;                Log Out&ndash;&gt;-->
+<!--            </a>-->
+<!--        </div>-->
+<!--    </nav>-->
+<!--</header>-->
+
+<!--&lt;!&ndash; main-->
+<!--   ============================================= &ndash;&gt;-->
+<!--<main>-->
+<!--    <section class="main-section">-->
+<!--        <section class="customer-head" >-->
+<!--            <ul class="breadcrumb">-->
+<!--                <img src="../assests/image/customer.png" width="60px">-->
+<!--                &lt;!&ndash;                <li><a href="#">Dashboard /</a></li>&ndash;&gt;-->
+<!--                <li class="active"> Customers</li>-->
+<!--            </ul>-->
+<!--        </section>-->
+<!--        <button type="button" class="btn btn-secondary back" style="background-color: #d705fd">-->
+<!--            <img src="../assests/image/left.png" width="26px" >-->
+<!--            Back-->
+<!--        </button>-->
+
+<!--        <section class="search">-->
+<!--            <form class="d-flex" role="search">-->
+<!--                <input class="form-control me-2" type="search" placeholder="Search Customer..." aria-label="Search">-->
+<!--                <button class="btn btn-outline-success" type="submit">Search</button>-->
+<!--            </form>-->
+<!--            <div class="add">-->
+<!--                <button type="button" class="btn btn-secondary add-cus"  data-bs-target="#exampleModal "-->
+<!--                        data-bs-toggle="modal">-->
+<!--                    <img src="../assests/img/plus.png" width="20px" >-->
+<!--                    Add Customer-->
+<!--                </button>-->
+<!--                <button type="button" class="btn btn-secondary view-cuss">View All Customer</button>-->
+<!--            </div>-->
+<!--        </section>-->
+
+<!--        <section class="cus-table" >-->
+<!--            <table class="table table-bordered" >-->
+<!--                <thead class="bg-danger text-white"  >-->
+<!--                <tr style="background-color:  #A8ACF6" >-->
+<!--                    <th>Customer ID</th>-->
+<!--                    <th>Customer Name</th>-->
+<!--                    <th>Customer Address</th>-->
+<!--                    <th>Customer Contact</th>-->
+<!--                    <th>Customer Salary</th>-->
+<!--                    <th>Action</th>-->
+<!--                </tr>-->
+<!--                </thead>-->
+<!--                <tbdoy>-->
+<!--                    <tr>-->
+<!--                        <td>C001</td>-->
+<!--                        <td>bhashana</td>-->
+<!--                        <td>kegalle</td>-->
+<!--                        <td>0714589935</td>-->
+<!--                        <td>20000</td>-->
+<!--                        <td class="odd">-->
+<!--                            <button class="btn btn-warning btn-mini" data-bs-target="#editCus"-->
+<!--                                    data-bs-toggle="modal"><i class="fa-solid fa-pen-to-square"></i> Edi-->
+<!--                            </button>-->
+
+<!--                            <button class="btn btn-danger btn-mini"><i class="fa-solid fa-trash"></i> Delete</button>-->
+<!--                        </td>-->
+
+<!--                    </tr>-->
+<!--                </tbdoy>-->
+<!--            </table>-->
+<!--        </section>-->
+<!--    </section>-->
+
+<!--    &lt;!&ndash; customer-form-save-->
+<!--       ============================================= &ndash;&gt;-->
+
+<!--    <div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="exampleModal" tabindex="-1">-->
+<!--        <div class="modal-dialog">-->
+<!--            <div class="modal-content">-->
+<!--                <div class="modal-header">-->
+<!--                    <h5 class="modal-title" id="exampleModalLabel">Customer Save</h5>-->
+<!--                    <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>-->
+<!--                </div>-->
+<!--                <div class="modal-body">-->
+<!--                    <section>-->
+<!--                        <div class="mb-3">-->
+<!--                            <label class="form-label" for="formFile">Customer ID</label>-->
+<!--                            <input class="form-control" id="formFile" type="text">-->
+<!--                        </div>-->
+<!--                        <div class="mb-3">-->
+<!--                            <label class="form-label" for="formFileMultiple">Customer Name</label>-->
+<!--                            <input class="form-control" id="formFileMultiple" multiple type="text">-->
+<!--                        </div>-->
+<!--                        <div class="mb-3">-->
+<!--                            <label class="form-label" for="formFileDisabled">Customer Address</label>-->
+<!--                            <input class="form-control" id="formFileDisabled" type="text">-->
+<!--                        </div>-->
+<!--                        <div class="mb-3">-->
+<!--                            <label class="form-label" for="formFileDisabled">Customer Contact</label>-->
+<!--                            <input class="form-control" id="formFileDisabled1" type="text">-->
+<!--                        </div>-->
+<!--                        <div class="mb-3">-->
+<!--                            <label class="form-label" for="formFileSm">Customer Salary</label>-->
+<!--                            <input class="form-control form-control-sm" id="formFileSm" type="number">-->
+<!--                        </div>-->
+
+
+<!--                        <div aria-label="Basic mixed styles example" class="btn-group" role="group">-->
+<!--                            <button class="btn btn-success save-cus" type="button">Save</button>-->
+<!--                            <button class="btn btn-secondary close-cus" data-bs-dismiss="modal" type="button">Close-->
+<!--                            </button>-->
+<!--                        </div>-->
+<!--                    </section>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    &lt;!&ndash; customer-form-edit-->
+<!--   ============================================= &ndash;&gt;-->
+
+<!--    <div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="editCus" tabindex="-1">-->
+<!--        <div class="modal-dialog">-->
+<!--            <div class="modal-content">-->
+<!--                <div class="modal-header">-->
+<!--                    <h5 class="modal-title" id="exampleModalLabel1">Customer Update</h5>-->
+<!--                    <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>-->
+<!--                </div>-->
+<!--                <div class="modal-body">-->
+<!--                    <section>-->
+<!--                        <div class="mb-3">-->
+<!--                            <label class="form-label" for="formFile">Customer ID</label>-->
+<!--                            <input class="form-control" id="formFile1" type="text">-->
+<!--                        </div>-->
+<!--                        <div class="mb-3">-->
+<!--                            <label class="form-label" for="formFileMultiple">Customer Name</label>-->
+<!--                            <input class="form-control" id="formFileMultiple1" multiple type="text">-->
+<!--                        </div>-->
+<!--                        <div class="mb-3">-->
+<!--                            <label class="form-label" for="formFileDisabled">Customer Address</label>-->
+<!--                            <input class="form-control" id="formFileDisabled11" type="text">-->
+<!--                        </div>-->
+<!--                        <div class="mb-3">-->
+<!--                            <label class="form-label" for="formFileDisabled">Customer Contact</label>-->
+<!--                            <input class="form-control" id="formFileDisabled12" type="text">-->
+<!--                        </div>-->
+<!--                        <div class="mb-3">-->
+<!--                            <label class="form-label" for="formFileSm">Customer Salary</label>-->
+<!--                            <input class="form-control form-control-sm" id="formFileSm1" type="number">-->
+<!--                        </div>-->
+
+
+<!--                        <div aria-label="Basic mixed styles example" class="btn-group" role="group">-->
+<!--                            <button class="btn btn-success save-cus" type="button">Update</button>-->
+<!--                            <button class="btn btn-secondary close-cus" data-bs-dismiss="modal" type="button">Close-->
+<!--                            </button>-->
+<!--                        </div>-->
+<!--                    </section>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--</main>-->
+
+
+<!--<script src="../assests/js/js/bootstrap.min.js"></script>-->
+<!--</body>-->
+<!--</html>-->
