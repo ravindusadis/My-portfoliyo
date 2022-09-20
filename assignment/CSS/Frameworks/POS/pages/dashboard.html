@@ -1,10 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Document Title
+       ============================================= -->
+    <title>POS System</title>
+
+    <!-- Stylesheets
+     ============================================= -->
+    <link rel="stylesheet" href="../assests/fonts/fonts/css/all.min.css">
+    <link rel="stylesheet" href="../assests/css/bootstrap.min.css">
+
+    <!-- Meta tags
+      ============================================= -->
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <!-- Styles
+      ============================================= -->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        header{
+            width: 100%;
+            background-color: black;
+        }
+
+        .card-title img{
+            width: 80px;
+        }
+
+        .collapse {
+            flex-basis: 100%;
+            flex-grow: 1;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .collapse a{
+            font-size: 25px;
+            color: white;
+        }
+        .collapse a:hover{
+            color: #A8ACF6;
+            transition: .4s;
+        }
+
+        main section{
+            height: 465px;
+            margin: 50px auto;
+            margin-top: 150px;
+
+        }
+
+        main section section {
+            margin: 80px auto;
+            text-align: center;
+            transition: background 0.5s,transform 0.5s;
+        }
+        main section a {
+            margin-top: 3px !important;
+            text-decoration: none;
+            padding-top: 8px;
+            padding-bottom: -2px;
+            padding-left: -7px;
+            padding-right: 15px;
+            border-radius: 50px;
+            margin: 59px;
+            -webkit-box-shadow: 0 5px 5px 2px #484848;
+            border: 1px solid #000;
+            background: #262626;
+            color: white;
+            font-size: 20px;
+            display: inline-block;
+            width: 250px;
+            height: 163px;
+            text-align: center;
+            margin-bottom: 13px;
+
+        }
+        main section section :hover {
+            background: #ff004f;
+            transform: translateY(-10px);
+        }
+        main section img:hover{
+            transform: scale(1.3);
+            transition: .3s;
+        }
+        body{
+         background: black;
+        }
+        a:hover{
+            color: white;
+        }
+
+    </style>
 </head>
 <body>
 
+<!-- header
+  ============================================= -->
+<header>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="../assests/image/market.png" alt="Logo" width="60" height="60" class="d-inline-block align-text-top">
+                <!--                POS System-->
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Customers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Items</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Orders</a>
+                    </li>
+                </ul>
+            </div>
+            <a class="navbar-brand" href="#">
+                <img src="../assests/image/Ellipse%206.png" alt="Logo" width="40" height="40"
+                     class="d-inline-block align-text-top">
+                <!--                Log Out-->
+            </a>
+        </div>
+    </nav>
+</header>
+
+<!-- main
+   ============================================= -->
+<main>
+    <section class="main-section">
+        <section>
+            <a href="#">
+                <img src="../assests/image/customer.png" width="70px">
+                <br>
+                <br>
+                Customers
+            </a>
+            <a href="#">
+                <img src="../assests/image/shopping-bag.png" width="70px">
+                <br>
+                <br>
+                Items
+            </a>
+
+
+            <a href="#">
+                <img src="../assests/image/received.png" width="70px">
+                <br>
+                <br>
+                Orders
+            </a>
+            <a href="#">
+                <img src="../assests/image/report.png" width="70px">
+                <br>
+                <br>
+                Sales reports
+            </a>
+            <a href="#">
+                <img src="../assests/image/Ellipse%206.png" width="70px">
+                <br>
+                <br>
+                LogOut
+            </a>
+        </section>
+    </section>
+</main>
+
+<script src="../assests/js/bootstrap.min.js"></script>
 </body>
 </html>
