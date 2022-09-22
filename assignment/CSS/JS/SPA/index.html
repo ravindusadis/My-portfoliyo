@@ -234,19 +234,6 @@
             background:#262626 ;
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
     </style>
     <body>
 <header>
@@ -265,16 +252,16 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav justify-content-center">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">Home</a>
+                        <a class="nav-link" aria-current="page" href="#" id="home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Customers</a>
+                        <a class="nav-link" href="#" id="customer">Customers</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Items</a>
+                        <a class="nav-link" href="#" id="items">Items</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Orders</a>
+                        <a class="nav-link" href="#" id="orders">Orders</a>
                     </li>
                 </ul>
             </div>
@@ -814,15 +801,37 @@
 
 
 </main>
+<script src="assests/js/bootstrap.min.js"></script>
+<script src="assests/js/jquery-3.6.1.min.js"></script>
 
+<script>
+    $("#home").click(function () {
+        $("#main1").css("display","inline")
+        $("#main2").css("display","none")
+        $("#main3").css("display","none")
+        $("#main4").css("display","none")
+    });
 
+    $("#customer").click(function () {
+        $("#main1").css("display","none")
+        $("#main2").css("display","flex")
+        $("#main3").css("display","none")
+        $("#main4").css("display","none")
+    });
 
+    $("#items").click(function () {
+        $("#main1").css("display","none")
+        $("#main2").css("display","none")
+        $("#main3").css("display","flex")
+        $("#main4").css("display","none")
+    });
 
-
-
-
-
-
-
+    $("#orders").click(function () {
+        $("#main1").css("display","none")
+        $("#main2").css("display","none")
+        $("#main3").css("display","none")
+        $("#main4").css("display","flex")
+    });
+</script>
     </body>
 </html>
