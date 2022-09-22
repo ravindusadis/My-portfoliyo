@@ -162,7 +162,83 @@
         tbody tr {
             color: white;
         }
-        /*<!--  item-->*/
+        /*<!--  order-->*/
+
+        #OR{
+            width: 90%;
+            height: 100vh;
+            margin: auto;
+            background-color:black;
+        }
+        #OR .customer-head{
+
+            width: 100%;
+            margin-top: 10px;
+            height: 40px;
+            background-color: black;
+        }
+        #OR .breadcrumb{
+            margin-left: 41%;
+            list-style: none;
+            border-radius: 4px;
+        }
+        #OR .breadcrumb li{
+            margin-top: 10px;
+            font-size:45px;
+            color: white;
+        }
+        #OR .breadcrumb a{
+            text-decoration: none;
+            font-size: 20px;
+        }
+       #OR .back{
+           margin-top: 20px;
+       }
+       #OR .add button:first-child {
+           background-color: #A8ACF6;
+           margin-left: 30px;
+           margin-top: 32px;
+       }
+        #OR .add button:first-child:hover {
+            background-color: #A8ACF6;
+        }
+        #OR tbody tr {
+            color: white;
+        }
+        #OR .cus-table {
+            margin-top: 25px;
+        }
+        #OR .order-detail {
+            margin-top: 25px;
+        }
+        #OR .add-button {
+            text-align: right;
+            margin-top: 1rem;
+        }
+        #OR  label{
+            color: white;
+        }
+        #OR .col-12{
+            color: white;
+        }
+        #OR .card{
+            background:#262626;
+        }
+        #OR .col-lg-5{
+            background:#262626;
+        }
+        #OR .content-box-2 {
+            background:#262626 ;
+        }
+
+
+
+
+
+
+
+
+
 
 
 
@@ -402,7 +478,7 @@
 
 </main>
 <!--    items-->
-<main>
+<main id="main3">
     <section class="main-section">
         <section class="customer-head" >
             <ul class="breadcrumb">
@@ -554,6 +630,185 @@
             </div>
         </div>
     </div>
+
+</main>
+<!--order-->
+<main id="main4">
+    <section id="OR">
+        <section class="customer-head">
+            <ul class="breadcrumb">
+                <img src="assests/image/received.png" width="70px">
+                <!--                <li><a href="#">Dashboard /</a></li>-->
+                <li class="active"> Orders</li>
+            </ul>
+        </section>
+        <button type="button" class="btn btn-secondary back" style="background-color:#f9004d">
+            <img src="assests/image/left.png" width="26px" >
+            Back
+        </button>
+
+
+        <div class="row order-detail">
+            <div class="col-lg-6 mt-lg-0 mt-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label>Customer Id</label>
+                                    <select class="form-select">
+                                        <option selected>Open this select menu</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label>Customer Name</label>
+                                    <input class="form-control" id="formFile5" type="text">
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label>Item Code</label>
+                                    <select class="form-select">
+                                        <option selected>Open this select menu</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label>Item Description</label>
+                                    <input class="form-control" id="formFile6" type="text">
+                                </div>
+                            </div>
+
+                            <div class="col-5">
+                                <div class="form-group">
+                                    <label>Qty On Hand</label>
+                                    <input class="form-control" id="formFile7" type="text">
+                                </div>
+                            </div>
+
+                            <div class="col-4">
+                                <div class="form-group">
+                                    <label>Unit Price</label>
+                                    <input class="form-control" id="formFile8" type="text">
+                                </div>
+                            </div>
+
+                            <div class="col-3">
+                                <div class="form-group">
+                                    <label>Qty</label>
+                                    <input class="form-control" id="formFile9" type="text">
+                                </div>
+                            </div>
+                            <div class="add-button">
+                                <button type="button" class="btn btn-primary col-12 col-sm-auto">Add Item</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5">
+                <section class="content-box-2">
+                    <div class="row"style="background-color: #262626 " >
+                        <div class="col-12" style="background-color: #262626  ">
+                            <div class="row" style="background-color:#262626 ">
+                                <div class="col-12" style="background-color:#262626 ">
+                                    <span class="" id="total-text">Total : </span>
+                                </div>
+                                <div class="col-12">
+                                    <span id="total">00.0</span> Rs/=
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-12">
+                            <div class="row">
+                                <div class="col-12">
+                                    <span id="total-text1">SubTotal : </span>
+                                </div>
+                                <div class="col-12">
+                                    <span id="subtotal">00.0</span> Rs/=
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-6 mt-2">
+                            <div class="form-group">
+                                <label>Cash</label>
+                                <input class="form-control" id="txtCash" min="0" type="number">
+                                <span class="control-error"
+                                      id="cash-empty-error"></span>
+                            </div>
+                        </div>
+                        <div class="col-6 mt-2">
+                            <div class="form-group">
+                                <label>Discount</label>
+                                <input class="form-control" id="txtDiscount" min="0" type="number">
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <div class="form-group">
+                                <label>Balance</label>
+                                <input class="form-control" id="txtBalance" type="text">
+                            </div>
+                        </div>
+                        <div class="col-4 mt-4">
+                            <button class="btn btn-success" id="btnSubmitOrder" type="button">Purchase</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <section class="cus-table ">
+            <div class="">
+                <table class="table table-bordered">
+                    <thead class="bg-danger text-white">
+                    <tr style="background-color:  #A8ACF6" >
+                        <th>Customer ID</th>
+                        <th>Customer Name</th>
+                        <th>Customer Address</th>
+                        <th>Customer Contact</th>
+                        <th>Customer Salary</th>
+                        <th>Action</th>
+                    </tr>
+                    </thead>
+                    <tbdoy>
+                        <tr>
+                            <td>C001</td>
+                            <td>Ravindu</td>
+                            <td>Kegalle</td>
+                            <td>0772936008</td>
+                            <td>600000</td>
+                            <td class="odd">
+                                <button class="btn btn-danger btn-mini"><i class="fa-solid fa-trash"></i> Delete
+                                </button>
+                            </td>
+
+                        </tr>
+                    </tbdoy>
+                </table>
+            </div>
+        </section>
+
+    </section>
+
 
 </main>
 
