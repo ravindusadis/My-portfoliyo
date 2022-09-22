@@ -401,6 +401,161 @@
     </div>
 
 </main>
+<!--    items-->
+<main>
+    <section class="main-section">
+        <section class="customer-head" >
+            <ul class="breadcrumb">
+                <img src="assests/image/shopping-bag.png" width="60px">
+
+                <li class="active"> Item</li>
+            </ul>
+        </section>
+        <button type="button" class="btn btn-secondary back" style="background-color: #ff004f">
+            <img src="assests/image/left.png" width="26px" >
+            Back
+        </button>
+
+        <section class="search">
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search Customer..." aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+            <div class="add">
+                <button type="button" class="btn btn-secondary add-cus"  data-bs-target="#exampleModal "
+                        data-bs-toggle="modal">
+                    <img src="assests/image/plus.png" width="20px" >
+                    Add Item
+                </button>
+                <button type="button" class="btn btn-secondary view-cuss">
+                    View All Item
+                </button>
+            </div>
+        </section>
+
+        <section class="cus-table" >
+            <table class="table table-bordered" >
+                <thead class="bg-danger text-white"  >
+                <tr style="background-color:  #A8ACF6" >
+                    <th>Item Code</th>
+                    <th>Item Name</th>
+                    <th>Qty</th>
+                    <th>Uniq Price</th>
+                    <th>Total</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbdoy>
+                    <tr>
+                        <td>I001</td>
+                        <td>soap</td>
+                        <td>20</td>
+                        <td>50</td>
+                        <td>1000</td>
+                        <td class="odd">
+                            <button class="btn btn-warning btn-mini" data-bs-target="#editCus"
+                                    data-bs-toggle="modal"><i class="fa-solid fa-pen-to-square"></i> Edi
+                            </button>
+
+                            <button class="btn btn-danger btn-mini"><i class="fa-solid fa-trash"></i> Delete</button>
+                        </td>
+
+                    </tr>
+                </tbdoy>
+            </table>
+        </section>
+    </section>
+
+    <!-- items-form-save
+       ============================================= -->
+
+    <div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="exampleModal1" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel2">Add Item</h5>
+                    <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+                </div>
+                <div class="modal-body">
+                    <section>
+                        <div class="mb-3">
+                            <label class="form-label" for="formFile">Item Code</label>
+                            <input class="form-control" id="formFile0" type="text">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="formFileMultiple">Item Name</label>
+                            <input class="form-control" id="formFileMultiple7" multiple type="text">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="formFileDisabled">Qty</label>
+                            <input class="form-control" id="formFileDisabled2" type="number">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="formFileDisabled">Uniq Price</label>
+                            <input class="form-control" id="formFileDisabled3" type="number">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="formFileSm">Total</label>
+                            <input class="form-control form-control-sm" id="formFileSm3" type="number">
+                        </div>
+
+
+                        <div aria-label="Basic mixed styles example" class="btn-group" role="group">
+                            <button class="btn btn-success save-cus" type="button">Save</button>
+                            <button class="btn btn-secondary close-cus" data-bs-dismiss="modal" type="button">Close
+                            </button>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- items-form-edit
+   ============================================= -->
+
+    <div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="editCus1" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel4">Customer Update</h5>
+                    <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+                </div>
+                <div class="modal-body">
+                    <section>
+                        <div class="mb-3">
+                            <label class="form-label" for="formFile">Customer ID</label>
+                            <input class="form-control" id="formFile2" type="text">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="formFileMultiple">Customer Name</label>
+                            <input class="form-control" id="formFileMultiple3" multiple type="text">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="formFileDisabled">Customer Address</label>
+                            <input class="form-control" id="formFileDisabled4" type="text">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="formFileDisabled">Customer Contact</label>
+                            <input class="form-control" id="formFileDisabled5" type="text">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="formFileSm">Customer Salary</label>
+                            <input class="form-control form-control-sm" id="formFileSm4" type="number">
+                        </div>
+
+
+                        <div aria-label="Basic mixed styles example" class="btn-group" role="group">
+                            <button class="btn btn-success save-cus" type="button">Update</button>
+                            <button class="btn btn-secondary close-cus" data-bs-dismiss="modal" type="button">Close
+                            </button>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
 
 
 
