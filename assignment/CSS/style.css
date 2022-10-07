@@ -509,6 +509,79 @@ tr td{
     margin-right: 20px;
     font-size: 25px;
 }
+.assignment-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+
+
+}
+.pro1{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.pro1 img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition:transform 0.5s;
+
+
+}
+. a{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6),#ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    transition: height 0.5s;
+
+}
+.layer h3{
+    font-weight: 600;
+    margin-bottom: 20px;
+
+}
+.layer a{
+    margin-top: 20px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    text-align: center;
+
+}
+.pro1:hover img{
+    transform: scale(1.1);
+
+}
+.pro1:hover .layer{
+    height: 100%;
+}
+.title-r{
+    color: white;
+    font-size: 30px;
+    width: 1300px;
+    margin: 10px auto;
+    text-align: center;
+    padding-bottom: 50px;
+
+}
 .contact-left p{
     margin-top: 30px;
 }
