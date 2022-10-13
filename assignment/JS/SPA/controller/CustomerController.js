@@ -122,7 +122,7 @@ function updateCustomer(customerID) {
         if (confirm("Are you sure want to delete this record!")) {
             $(this).closest('tr').remove();
         } else {
-            e.preventDefault();
+            alert("No such customer to delete.");
         }
     });
 function clearData() {
