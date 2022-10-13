@@ -54,9 +54,10 @@ function loadAllOrder() {
 
     for (var order of orders){
         let total = order.qty * order.price;
+        $("#total").text(total);
         var all = `<tr><td>${order.code}</td><td>${order.itemName}</td><td>${order.price}</td><td>${order.qty}</td><td>${total}</td>
                         <td>
-                        <button class="btn btn-danger btn-mini delete"><i class="fa-solid fa-trash"></i> Delete</button>
+                         <button class="btn btn-danger btn-mini delete-"><i class="fa-solid fa-trash"></i> Delete</button>
                         </td>
                     </tr>`;
         $("#tblOrder").append(all);
