@@ -23,13 +23,13 @@ $("#saveCustomer").click(function (){
 
 });
 // / customer object
-var customerObject = {
-    id : customerID,
-    name : customerName,
-    address : customerAddress,
-    contact : customerContact,
-    salary : customerSalary
-}
+// var customerObject = {
+//     id : customerID,
+//     name : customerName,
+//     address : customerAddress,
+//     contact : customerContact,
+//     salary : customerSalary
+// }
 
 $("#updateCustomer").click(function (){
     let customerID = $("#txtCustomerIDEdit").val();
