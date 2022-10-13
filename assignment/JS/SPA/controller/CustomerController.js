@@ -11,8 +11,9 @@ $("#saveCustomer").click(function (){
     // push data
     customers.push(customer);
 
-
+    clearData()
     loadAllCustomers()
+
 
 
 
@@ -40,4 +41,12 @@ function loadAllCustomers() {
         $("#tblCustomer").append(all);
 
     }
+}
+function clearData() {
+
+    $("#txtCustomerID").val("");
+    $("#txtCustomerName").val("");
+    $("#txtCustomerAddress").val("");
+    $("#txtCustomerContact").val("");
+    $("#txtCustomerSalary").val("");
 }
