@@ -14,7 +14,8 @@ $("#saveCustomer").click(function (){
     clearData()
     loadAllCustomers()
     bindRowClickEvents();
-    searchCustomer(cusID)
+    loadAllCustomersForOption();
+
 
 
 
