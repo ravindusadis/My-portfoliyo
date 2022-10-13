@@ -18,6 +18,7 @@ $("#saveItem").click(function (){
     clearItemData();
     loadAllItems();
     bindRowClickEventTable();
+    loadAllItemForOption();
 });
 
 function loadAllItems() {
