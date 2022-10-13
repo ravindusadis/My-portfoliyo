@@ -4,7 +4,6 @@ $("#saveItem").click(function (){
     let itemName = $("#txtItemName").val();
     let qty = $("#txtItemQty").val();
     let unitPrice = $("#txtItemUnitPrice").val();
-    let total = $("#txtItemTotal").val();
 
 
     var itemObject = {
@@ -12,7 +11,7 @@ $("#saveItem").click(function (){
         itemName: itemName,
         qty: qty,
         unitPrice: unitPrice,
-        total: total
+
     }
 
     items.push(itemObject);
@@ -24,7 +23,7 @@ function loadAllItems() {
     $("#tblItem").empty();
 
     for (var item of items){
-        var all = `<tr><td>${item.code}</td><td>${item.itemName}</td><td>${item.qty}</td><td>${item.unitPrice}</td><td>${item.total}</td>
+        var all = `<tr><td>${item.code}</td><td>${item.itemName}</td><td>${item.qty}</td><td>${item.unitPrice}</td>
                         <td><button class="btn btn-warning btn-mini" data-bs-target="#editItems"
                         data-bs-toggle="modal" id="btn-edit"><i class="fa-solid fa-pen-to-square"></i> Edit
                         </button>
