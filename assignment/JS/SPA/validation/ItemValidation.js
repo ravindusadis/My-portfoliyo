@@ -82,3 +82,35 @@ $("#txtItemUnitPrice").on('keydown', function (event) {
             txtField.parent().children('span').text(error);
         }
     }
+
+function textSuccess(txtField,error) {
+    if (txtField.val().length <= 0) {
+        defaultText(txtField,"");
+    } else {
+        txtField.css('border', '2px solid green');
+        txtField.parent().children('span').text(error);
+    }
+}
+
+    function defaultText(txtField,error) {
+    txtField.css("border", "1px solid #ced4da");
+    txtField.parent().children('span').text(error);
+}
+
+    function focusText(txtField) {
+    txtField.focus();
+}
+
+    function setButtonState(value){
+    if (value>0){
+        $("#saveItem").attr('disabled',true);
+    }else{
+        $("#saveItem").attr('disabled',false);
+    }
+}
+
+    function clearAllTexts() {
+    $("#txtItemCode").focus();
+    $("#txtItemCode,#txtItemName,#txtItemQty,#txtItemUnitPrice").val("");
+    checkValidity();
+    }
