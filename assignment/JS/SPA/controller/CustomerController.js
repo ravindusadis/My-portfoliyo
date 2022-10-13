@@ -117,7 +117,7 @@ function updateCustomer(customerID) {
 
 }
 
-    $("#tblCustomer").on("click", ".delete", function (e) {
+$("#tblCustomer").on("click", ".delete", function () {
         if (confirm("Are you sure want to delete this record!")) {
             $(this).closest('tr').remove();
         } else {

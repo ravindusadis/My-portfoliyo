@@ -85,3 +85,7 @@ function updateItem(itemCode) {
         return false;
     }
 }
+
+$("#tblItem").on("click", ".delete-item", function (){
+
+});
