@@ -39,4 +39,5 @@ function loadAllCustomers() {
 
         $("#tblCustomer").append(all);
 
+    }
 }
