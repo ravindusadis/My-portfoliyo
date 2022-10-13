@@ -106,3 +106,6 @@ function updateCustomer(customerID) {
 
 
 }
+function deleteCustomer(customerID) {
+
+}
