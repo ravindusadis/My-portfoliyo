@@ -52,5 +52,42 @@ function clearData() {
     $("#txtCustomerSalary").val("");
 }
 function searchCustomer(cusID) {
+    for (let customer of customers) {
+        if (customer.id == cusID) {
+            return customer;
+        }
+    }
+}
+
+$(document).on("click", "#btn-edit", function () {
+    $("#tblCustomer>tr").click(function () {
+        let id = $(this).children(":eq(0)").text();
+        let name = $(this).children(":eq(1)").text();
+        let address = $(this).children(":eq(2)").text();
+        let contact = $(this).children(":eq(3)").text();
+        let salary = $(this).children(":eq(4)").text();
+
+    $("#txtCustomerIDEdit").val(id);
+    $("#txtCustomerNameEdit").val(name);
+    $("#txtCustomerAddressEdit").val(address);
+    $("#txtCustomerContactEdit").val(contact);
+    $("#txtCustomerSalaryEdit").val(salary);
+
+});
+});
+
+function updateCustomer(customerID) {
+    let customer = searchCustomer(customerID);
+    if (customer != null) {
+        customer.id = $("#txtCustomerID").val();
+        customer.name = $("#txtCustomerName").val();
+        customer.address = $("#txtCustomerAddress").val();
+        customer.salary = $("#txtCustomerSalary").val();
+        loadAllCustomers();
+        return true;
+    } else {
+        return false;
+    }
+
 
 }
