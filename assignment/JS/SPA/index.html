@@ -366,23 +366,8 @@
                     <th>Action</th>
                 </tr>
                 </thead>
-                <tbdoy>
-                    <tr>
-                        <td>C001</td>
-                        <td>Ravindu</td>
-                        <td>kegalle</td>
-                        <td>0772936008</td>
-                        <td>600000</td>
-                        <td class="odd">
-                            <button class="btn btn-warning btn-mini" data-bs-target="#editCus"
-                                    data-bs-toggle="modal"><i class="fa-solid fa-pen-to-square"></i> Edi
-                            </button>
-
-                            <button class="btn btn-danger btn-mini"><i class="fa-solid fa-trash"></i> Delete</button>
-                        </td>
-
-                    </tr>
-                </tbdoy>
+                <tbody id="tblCustomer">
+                </tbody>
             </table>
         </section>
     </section>
@@ -390,39 +375,39 @@
     <!-- customer-form-save
        ============================================= -->
 
-    <div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="exampleModal" tabindex="-1">
+    <div aria-hidden="true" aria-labelledby="customerLabel" class="modal fade" id="saveCustomers" tabindex="-1">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Customer Save</h5>
+                    <h5 class="modal-title" id="customerLabel">Customer Save</h5>
                     <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
                 </div>
                 <div class="modal-body">
                     <section>
                         <div class="mb-3">
-                            <label class="form-label" for="formFile">Customer ID</label>
-                            <input class="form-control" id="formFile" type="text">
+                            <label class="form-label" for="txtCustomerID">Customer ID</label>
+                            <input class="form-control" id="txtCustomerID" type="text">
                         </div>
                         <div class="mb-3">
-                            <label class="form-label" for="formFileMultiple">Customer Name</label>
-                            <input class="form-control" id="formFileMultiple" multiple type="text">
+                            <label class="form-label" for="txtCustomerName">Customer Name</label>
+                            <input class="form-control" id="txtCustomerName" multiple type="text">
                         </div>
                         <div class="mb-3">
-                            <label class="form-label" for="formFileDisabled">Customer Address</label>
-                            <input class="form-control" id="formFileDisabled" type="text">
+                            <label class="form-label" for="txtCustomerAddress">Customer Address</label>
+                            <input class="form-control" id="txtCustomerAddress" type="text">
                         </div>
                         <div class="mb-3">
-                            <label class="form-label" for="formFileDisabled">Customer Contact</label>
-                            <input class="form-control" id="formFileDisabled1" type="text">
+                            <label class="form-label" for="txtCustomerContact">Customer Contact</label>
+                            <input class="form-control" id="txtCustomerContact" type="text">
                         </div>
                         <div class="mb-3">
-                            <label class="form-label" for="formFileSm">Customer Salary</label>
-                            <input class="form-control form-control-sm" id="formFileSm" type="number">
+                            <label class="form-label" for="txtCustomerSalary">Customer Salary</label>
+                            <input class="form-control form-control-sm" id="txtCustomerSalary" type="number">
                         </div>
 
 
                         <div aria-label="Basic mixed styles example" class="btn-group" role="group">
-                            <button class="btn btn-success save-cus" type="button">Save</button>
+                            <button class="btn btn-success save-cus" type="button" id="saveCustomer">Save</button>
                             <button class="btn btn-secondary close-cus" data-bs-dismiss="modal" type="button">Close
                             </button>
                         </div>
@@ -435,34 +420,34 @@
     <!-- customer-form-edit
    ============================================= -->
 
-    <div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="editCus" tabindex="-1">
+    <div aria-hidden="true" aria-labelledby="customerLabelEdit" class="modal fade" id="editCustomers" tabindex="-1">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel1">Customer Update</h5>
+                    <h5 class="modal-title" id="customerLabelEdit">Customer Update</h5>
                     <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
                 </div>
                 <div class="modal-body">
                     <section>
                         <div class="mb-3">
-                            <label class="form-label" for="formFile">Customer ID</label>
-                            <input class="form-control" id="formFile1" type="text">
+                            <label class="form-label" for="txtCustomerIDEdit">Customer ID</label>
+                            <input class="form-control" id="txtCustomerIDEdit" type="text">
                         </div>
                         <div class="mb-3">
-                            <label class="form-label" for="formFileMultiple">Customer Name</label>
-                            <input class="form-control" id="formFileMultiple1" multiple type="text">
+                            <label class="form-label" for="txtCustomerNameEdit">Customer Name</label>
+                            <input class="form-control" id="txtCustomerNameEdit" multiple type="text">
                         </div>
                         <div class="mb-3">
-                            <label class="form-label" for="formFileDisabled">Customer Address</label>
-                            <input class="form-control" id="formFileDisabled11" type="text">
+                            <label class="form-label" for="txtCustomerAddressEdit">Customer Address</label>
+                            <input class="form-control" id="txtCustomerAddressEdit" type="text">
                         </div>
                         <div class="mb-3">
-                            <label class="form-label" for="formFileDisabled">Customer Contact</label>
-                            <input class="form-control" id="formFileDisabled12" type="text">
+                            <label class="form-label" for="txtCustomerContactEdit">Customer Contact</label>
+                            <input class="form-control" id="txtCustomerContactEdit" type="text">
                         </div>
                         <div class="mb-3">
-                            <label class="form-label" for="formFileSm">Customer Salary</label>
-                            <input class="form-control form-control-sm" id="formFileSm1" type="number">
+                            <label class="form-label" for="txtCustomerSalaryEdit">Customer Salary</label>
+                            <input class="form-control form-control-sm" id="txtCustomerSalaryEdit" type="number">
                         </div>
 
 
@@ -510,70 +495,57 @@
             </div>
         </section>
 
-        <section class="cus-table" >
+        <section class="item-table" >
+            <div div class="col-md-12 mt-4" style="height:430px; overflow-y: scroll">
             <table class="table table-bordered" >
                 <thead class="bg-danger text-white"  >
                 <tr style="background-color:  #A8ACF6" >
                     <th>Item Code</th>
                     <th>Item Name</th>
                     <th>Qty</th>
-                    <th>Uniq Price</th>
+                    <th>Unit Price</th>
                     <th>Total</th>
                     <th>Action</th>
                 </tr>
                 </thead>
-                <tbdoy>
-                    <tr>
-                        <td>I001</td>
-                        <td>soap</td>
-                        <td>20</td>
-                        <td>50</td>
-                        <td>1000</td>
-                        <td class="odd">
-                            <button class="btn btn-warning btn-mini" data-bs-target="#editCus"
-                                    data-bs-toggle="modal"><i class="fa-solid fa-pen-to-square"></i> Edi
-                            </button>
-
-                            <button class="btn btn-danger btn-mini"><i class="fa-solid fa-trash"></i> Delete</button>
-                        </td>
-
-                    </tr>
-                </tbdoy>
+                <tbody id="tblItem">
+                </tbody>
             </table>
+            </div>
         </section>
     </section>
 
     <!-- items-form-save
        ============================================= -->
 
-    <div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="exampleModal1" tabindex="-1">
+    <div aria-hidden="true" aria-labelledby="itemLabel" class="modal fade" id="saveItems" tabindex="-1">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel2">Add Item</h5>
+                    <h5 class="modal-title" id="itemLabel">Add Item</h5>
                     <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
                 </div>
                 <div class="modal-body">
                     <section>
                         <div class="mb-3">
-                            <label class="form-label" for="formFile">Item Code</label>
-                            <input class="form-control" id="formFile0" type="text">
+                            <label class="form-label" for="txtItemCode">Item Code</label>
+                            <input class="form-control" id="txtItemCode" type="text">
                         </div>
                         <div class="mb-3">
-                            <label class="form-label" for="formFileMultiple">Item Name</label>
-                            <input class="form-control" id="formFileMultiple7" multiple type="text">
+                            <label class="form-label" for="txtItemName">Item Name</label>
+                            <input class="form-control" id="txtItemName" multiple type="text">
                         </div>
                         <div class="mb-3">
-                            <label class="form-label" for="formFileDisabled">Qty</label>
-                            <input class="form-control" id="formFileDisabled2" type="number">
+                            <label class="form-label" for="txtItemQty">Qty</label>
+                            <input class="form-control" id="txtItemQty" type="number">
                         </div>
                         <div class="mb-3">
-                            <label class="form-label" for="formFileDisabled">Uniq Price</label>
-                            <input class="form-control" id="formFileDisabled3" type="number">
+                            <label class="form-label" for="txtItemUnitPrice">Unit Price</label>
+                            <input class="form-control" id="txtItemUnitPrice" type="number">
                         </div>
                         <div class="mb-3">
-                            <label class="form-label" for="formFileSm">Total</label>
-                            <input class="form-control form-control-sm" id="formFileSm3" type="number">
+                            <label class="form-label" for="txtItemTotal">Total</label>
+                            <input class="form-control form-control-sm" id="txtItemTotal" type="number">
                         </div>
 
 
@@ -590,34 +562,34 @@
     <!-- items-form-edit
    ============================================= -->
 
-    <div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="editCus1" tabindex="-1">
+    <div aria-hidden="true" aria-labelledby="itemLabelEdit" class="modal fade" id="editItems" tabindex="-1">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel4">Customer Update</h5>
+                    <h5 class="modal-title" id="itemLabelEdit">Customer Update</h5>
                     <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
                 </div>
                 <div class="modal-body">
                     <section>
                         <div class="mb-3">
-                            <label class="form-label" for="formFile">Customer ID</label>
-                            <input class="form-control" id="formFile2" type="text">
+                            <label class="form-label" for="txtItemCodeEdit">Item Code</label>
+                            <input class="form-control" id="txtItemCodeEdit" type="text">
                         </div>
                         <div class="mb-3">
-                            <label class="form-label" for="formFileMultiple">Customer Name</label>
-                            <input class="form-control" id="formFileMultiple3" multiple type="text">
+                            <label class="form-label" for="txtItemNameEdit">Item Name</label>
+                            <input class="form-control" id="txtItemNameEdit" multiple type="text">
                         </div>
                         <div class="mb-3">
-                            <label class="form-label" for="formFileDisabled">Customer Address</label>
-                            <input class="form-control" id="formFileDisabled4" type="text">
+                            <label class="form-label" for="txtItemQtyEdit">Qty</label>
+                            <input class="form-control" id="txtItemQtyEdit" type="text">
                         </div>
                         <div class="mb-3">
-                            <label class="form-label" for="formFileDisabled">Customer Contact</label>
-                            <input class="form-control" id="formFileDisabled5" type="text">
+                            <label class="form-label" for="txtItemUnitPriceEdit">Unit Price</label>
+                            <input class="form-control" id="txtItemUnitPriceEdit" type="text">
                         </div>
                         <div class="mb-3">
-                            <label class="form-label" for="formFileSm">Customer Salary</label>
-                            <input class="form-control form-control-sm" id="formFileSm4" type="number">
+                            <label class="form-label" for="txtItemTotalEdit">Total</label>
+                            <input class="form-control form-control-sm" id="txtItemTotalEdit" type="number">
                         </div>
 
 
@@ -635,8 +607,8 @@
 </main>
 <!--order-->
 <main id="main4">
-    <section id="OR">
-        <section class="customer-head">
+    <section class="main-section" id="OR">
+        <section class="order-head">
             <ul class="breadcrumb">
                 <img src="assests/image/received.png" width="70px">
                 <!--                <li><a href="#">Dashboard /</a></li>-->
@@ -657,8 +629,7 @@
                             <div class="col-6">
                                 <div class="form-group">
                                     <label>Customer Id</label>
-                                    <select class="form-select">
-                                        <option selected>Open this select menu</option>
+                                    <select class="form-select" id="customerID">
                                         <option value="1">One</option>
                                         <option value="2">Two</option>
                                         <option value="3">Three</option>
@@ -688,28 +659,28 @@
                             <div class="col-6">
                                 <div class="form-group">
                                     <label>Item Description</label>
-                                    <input class="form-control" id="formFile6" type="text">
+                                    <input class="form-control" id="ItemDescription" type="text">
                                 </div>
                             </div>
 
                             <div class="col-5">
                                 <div class="form-group">
                                     <label>Qty On Hand</label>
-                                    <input class="form-control" id="formFile7" type="text">
+                                    <input class="form-control" id="QtyOnHand" type="text">
                                 </div>
                             </div>
 
                             <div class="col-4">
                                 <div class="form-group">
                                     <label>Unit Price</label>
-                                    <input class="form-control" id="formFile8" type="text">
+                                    <input class="form-control" id="unitPrice" type="text">
                                 </div>
                             </div>
 
                             <div class="col-3">
                                 <div class="form-group">
                                     <label>Qty</label>
-                                    <input class="form-control" id="formFile9" type="text">
+                                    <input class="form-control" id="qty" type="text">
                                 </div>
                             </div>
                             <div class="add-button">
@@ -777,8 +748,8 @@
             </div>
         </div>
 
-        <section class="cus-table ">
-            <div class="">
+        <section class="order-table">
+            <div div class="col-md-12 mt-4" style="height:280px; overflow-y: scroll">
                 <table class="table table-bordered">
                     <thead class="bg-danger text-white">
                     <tr style="background-color:  #A8ACF6" >
@@ -790,20 +761,8 @@
                         <th>Action</th>
                     </tr>
                     </thead>
-                    <tbdoy>
-                        <tr>
-                            <td>I001</td>
-                            <td>ice creem</td>
-                            <td>70</td>
-                            <td>2</td>
-                            <td>140</td>
-                            <td class="odd">
-                                <button class="btn btn-danger btn-mini"><i class="fa-solid fa-trash"></i> Delete
-                                </button>
-                            </td>
-
-                        </tr>
-                    </tbdoy>
+                    <tbody id="tblOrder">
+                    </tbody>
                 </table>
             </div>
         </section>
