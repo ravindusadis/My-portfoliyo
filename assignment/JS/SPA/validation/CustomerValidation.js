@@ -18,3 +18,110 @@ $("#txtCustomerID,#txtCustomerName,#txtCustomerAddress,#txtCustomerContact,#txtC
         event.preventDefault();
     }
 });
+
+
+
+$("#txtCustomerID,#txtCustomerName,#txtCustomerAddress,#txtCustomerContact,#txtCustomerSalary").on('keyup', function (event) {
+    checkValidity();
+});
+
+$("#txtCustomerID,#txtCustomerName,#txtCustomerAddress,#txtCustomerContact,#txtCustomerSalary").on('blur', function (event) {
+    checkValidity();
+});
+
+function checkValidity() {
+    let errorCount=0;
+    for (let validation of customerValidations) {
+        if (check(validation.reg,validation.field)) {
+            textSuccess(validation.field,"");
+        } else {
+            errorCount=errorCount+1;
+            setTextError(validation.field,validation.error);
+        }
+    }
+    setButtonState(errorCount);
+}
+
+$("#txtCustomerID").on('keydown', function (event) {
+    if (event.key == "Enter" && check(cusIDRegEx, $("#txtCustomerID"))) {
+        $("#txtCustomerName").focus();
+    } else {
+        focusText($("#txtCustomerID"));
+    }
+});
+
+
+$("#txtCustomerName").on('keydown', function (event) {
+    if (event.key == "Enter" && check(cusNameRegEx, $("#txtCustomerName"))) {
+        focusText($("#txtCustomerAddress"));
+    }
+});
+
+
+$("#txtCustomerAddress").on('keydown', function (event) {
+    if (event.key == "Enter" && check(cusAddressRegEx, $("#txtCustomerAddress"))) {
+        focusText($("#txtCustomerContact"));
+    }
+});
+
+$("#txtCustomerContact").on('keydown', function (event) {
+    if (event.key == "Enter" && check(cusAddressRegEx, $("#txtCustomerContact"))) {
+        focusText($("#txtCustomerSalary"));
+    }
+});
+
+$("#txtCustomerSalary").on('keydown', function (event) {
+    if (event.key == "Enter" && check(cusSalaryRegEx, $("#txtCustomerSalary"))) {
+        let res = confirm("Do you want to add this customer.?");
+        if (res) {
+            clearAllTexts();
+        }
+    }
+});
+
+
+function check(regex, txtField) {
+    let inputValue = txtField.val();
+    return regex.test(inputValue) ? true : false;
+}
+
+function setTextError(txtField,error) {
+    if (txtField.val().length <= 0) {
+        defaultText(txtField,"");
+    } else {
+        txtField.css('border', '2px solid red');
+        txtField.parent().children('span').text(error);
+    }
+}
+
+function textSuccess(txtField,error) {
+    if (txtField.val().length <= 0) {
+        defaultText(txtField,"");
+    } else {
+        txtField.css('border', '2px solid green');
+        txtField.parent().children('span').text(error);
+    }
+}
+
+function defaultText(txtField,error) {
+    txtField.css("border", "1px solid #ced4da");
+    txtField.parent().children('span').text(error);
+}
+
+function focusText(txtField) {
+    txtField.focus();
+}
+
+function setButtonState(value){
+    if (value>0){
+        $("#saveCustomer").attr('disabled',true);
+    }else{
+        $("#saveCustomer").attr('disabled',false);
+    }
+}
+
+function clearAllTexts() {
+    $("#txtCustomerID").focus();
+    $("#txtCustomerID,#txtCustomerName,#txtCustomerAddress,#txtCustomerContact,#txtCustomerSalary").val("");
+    checkValidity();
+}
