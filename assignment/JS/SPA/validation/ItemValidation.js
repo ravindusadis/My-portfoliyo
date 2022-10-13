@@ -39,3 +39,32 @@ const itemUnitPriceRegEx = /^[0-9]{1,}[.]?[0-9]{1,2}$/;
     }
         setButtonState(errorCount);
 }
+
+    $("#txtItemCode").on('keydown', function (event) {
+    if (event.key == "Enter" && check(itemCodeRegEx, $("#txtItemCode"))) {
+        $("#txtItemName").focus();
+    } else {
+        focusText($("#txtItemCode"));
+    }
+    });
+
+    $("#txtItemName").on('keydown', function (event) {
+    if (event.key == "Enter" && check(itemNameRegEx, $("#txtItemName"))) {
+        focusText($("#txtItemQty"));
+    }
+    });
+
+    $("#txtItemQty").on('keydown', function (event) {
+    if (event.key == "Enter" && check(itemQtyRegEx, $("#txtItemQty"))) {
+        focusText($("#txtItemUnitPrice"));
+    }
+    });
+
+$("#txtItemUnitPrice").on('keydown', function (event) {
+    if (event.key == "Enter" && check(itemUnitPriceRegEx, $("#txtItemUnitPrice"))) {
+        let res = confirm("Do you want to add this item.?");
+        if (res) {
+            clearAllTexts();
+        }
+    }
+});
