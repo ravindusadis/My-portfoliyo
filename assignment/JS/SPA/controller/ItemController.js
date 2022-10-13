@@ -41,3 +41,6 @@ function searchItem(code) {
         }
     }
 }
+$(document).on("click", "#btn-edit", function (){
+    bindRowClickEventTable()
+});
