@@ -37,7 +37,7 @@ const itemUnitPriceRegEx = /^[0-9]{1,}[.]?[0-9]{1,2}$/;
             setTextError(validation.field,validation.error);
         }
     }
-        setButtonState(errorCount);
+        setItemButtonState(errorCount);
 }
 
     $("#txtItemCode").on('keydown', function (event) {
@@ -101,7 +101,7 @@ function textSuccess(txtField,error) {
     txtField.focus();
 }
 
-    function setButtonState(value){
+function setItemButtonState(value){
     if (value>0){
         $("#saveItem").attr('disabled',true);
     }else{

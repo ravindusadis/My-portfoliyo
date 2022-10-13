@@ -24,7 +24,7 @@ $("#selectItemCode").click(function (){
     $("#qtyOnHand").val(search.qty);
     $("#unitPrice").val(search.unitPrice);
 });
-$("#addItem").click(function (){
+$("#addItem").click(function (message){
     let cusId = $("#selectCustomerID").val();
     let cusName = $("#orderCustomerName").val();
     let itemCode = $("#selectItemCode").val();
@@ -42,5 +42,45 @@ $("#addItem").click(function (){
         price:unitPrice,
         qty:qty
     }
+    orders.push(orderObject);
+    clearOrderData();
+    loadAllOrder();
+    itemQtyLoad(itemCode, qty);
+
 });
 
+function loadAllOrder() {
+    $("#tblOrder").empty();
+
+    for (var order of orders){
+        let total = order.qty * order.price;
+        var all = `<tr><td>${order.code}</td><td>${order.itemName}</td><td>${order.price}</td><td>${order.qty}</td><td>${total}</td>
+                        <td>
+                        <button class="btn btn-danger btn-mini delete"><i class="fa-solid fa-trash"></i> Delete</button>
+                        </td>
+                    </tr>`;
+        $("#tblOrder").append(all);
+    }
+}
+
+function itemQtyLoad(ItemCode, Qty) {
+    for (var item of items){
+        if (item.code == ItemCode){
+            item.qty = item.qty-Qty;
+            return true;
+        }else {
+            return  false;
+        }
+    }
+
+}
+
+function clearOrderData() {
+    $("#selectCustomerID").val("");
+    $("#orderCustomerName").val("");
+    $("#selectItemCode").val("");
+    $("#itemDescription").val("");
+    $("#qtyOnHand").val("");
+    $("#unitPrice").val("");
+    $("#qty").val("")
+}
