@@ -84,10 +84,11 @@ $(document).on("click", "#btn-edit", function () {
 function updateCustomer(customerID) {
     let customer = searchCustomer(customerID);
     if (customer != null) {
-        customer.id = $("#txtCustomerID").val();
-        customer.name = $("#txtCustomerName").val();
-        customer.address = $("#txtCustomerAddress").val();
-        customer.salary = $("#txtCustomerSalary").val();
+        customer.id = $("#txtCustomerIDEdit").val();
+        customer.name = $("#txtCustomerNameEdit").val();
+        customer.address = $("#txtCustomerAddressEdit").val();
+        customer.contact = $("#txtCustomerContactEdit").val();
+        customer.salary = $("#txtCustomerSalaryEdit").val();
         loadAllCustomers();
         return true;
     } else {
