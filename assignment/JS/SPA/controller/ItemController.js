@@ -17,6 +17,7 @@ $("#saveItem").click(function (){
     items.push(itemObject);
 
     loadAllItems();
+    bindRowClickEventTable();
 });
 
 function loadAllItems() {
@@ -25,7 +26,7 @@ function loadAllItems() {
     for (var item of items){
         var all = `<tr><td>${item.code}</td><td>${item.itemName}</td><td>${item.qty}</td><td>${item.unitPrice}</td>
                         <td><button class="btn btn-warning btn-mini" data-bs-target="#editItems"
-                        data-bs-toggle="modal" id="btn-edit"><i class="fa-solid fa-pen-to-square"></i> Edit
+                       data-bs-toggle="modal" id="btn-editItem"><i class="fa-solid fa-pen-to-square"></i> Edit
                         </button>
                         <button class="btn btn-danger btn-mini delete"><i class="fa-solid fa-trash"></i> Delete</button>
                         </td>
@@ -41,6 +42,20 @@ function searchItem(code) {
         }
     }
 }
-$(document).on("click", "#btn-edit", function (){
+$(document).on("click", "#btn-editItem", function (){
     bindRowClickEventTable()
 });
+function bindRowClickEventTable() {
+    $("#tblItem>tr").click(function () {
+        let code = $(this).children(":eq(0)").text();
+        let itemName = $(this).children(":eq(1)").text();
+        let qty = $(this).children(":eq(2)").text();
+        let unitPrice = $(this).children(":eq(3)").text();
+
+        $("#txtItemCodeEdit").val(code);
+        $("#txtItemNameEdit").val(itemName);
+        $("#txtItemQtyEdit").val(qty);
+        $("#txtItemUnitPriceEdit").val(unitPrice);
+
+    });
+}
