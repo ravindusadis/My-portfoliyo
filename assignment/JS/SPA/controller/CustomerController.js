@@ -13,6 +13,7 @@ $("#saveCustomer").click(function (){
 
     clearData()
     loadAllCustomers()
+    searchCustomer(cusID)
 
 
 
@@ -49,4 +50,7 @@ function clearData() {
     $("#txtCustomerAddress").val("");
     $("#txtCustomerContact").val("");
     $("#txtCustomerSalary").val("");
+}
+function searchCustomer(cusID) {
+
 }
