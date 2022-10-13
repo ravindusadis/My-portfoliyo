@@ -57,7 +57,7 @@ function loadAllOrder() {
         $("#total").text(total);
         var all = `<tr><td>${order.code}</td><td>${order.itemName}</td><td>${order.price}</td><td>${order.qty}</td><td>${total}</td>
                         <td>
-                         <button class="btn btn-danger btn-mini delete-"><i class="fa-solid fa-trash"></i> Delete</button>
+                       <button class="btn btn-danger btn-mini delete-order"><i class="fa-solid fa-trash"></i> Delete</button>
                         </td>
                     </tr>`;
         $("#tblOrder").append(all);
@@ -75,6 +75,14 @@ function itemQtyLoad(ItemCode, Qty) {
     }
 
 }
+$("#tblOrder").on("click", ".delete-order", function (){
+    if (confirm("Are you sure want to delete this record!")) {
+        $(this).closest('tr').remove();
+    } else {
+        alert("No such item to delete.");
+    }
+});
+
 
 function clearOrderData() {
     $("#selectCustomerID").val("");
