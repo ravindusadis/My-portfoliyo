@@ -12,9 +12,14 @@ $("#saveCustomer").click(function (){
     customers.push(customer);
 
 
-    clearData();
-    loadAllCustomers();
-    bindRowClickEvents();
-    loadAllCustomersForOption();
+
 
 });
+// / customer object
+var customerObject = {
+    id : customerID,
+    name : customerName,
+    address : customerAddress,
+    contact : customerContact,
+    salary : customerSalary
+}
