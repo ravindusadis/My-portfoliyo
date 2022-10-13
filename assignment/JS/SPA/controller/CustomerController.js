@@ -13,6 +13,7 @@ $("#saveCustomer").click(function (){
 
     clearData()
     loadAllCustomers()
+    bindRowClickEvents();
     searchCustomer(cusID)
 
 
@@ -49,7 +50,7 @@ function loadAllCustomers() {
                         <td><button class="btn btn-warning btn-mini" data-bs-target="#editCustomers"
                         data-bs-toggle="modal" id="btn-edit"><i class="fa-solid fa-pen-to-square"></i> Edit
                         </button>
-                        <button class="btn btn-danger btn-mini"><i class="fa-solid fa-trash"></i> Delete</button>
+                         <button class="btn btn-danger btn-mini delete"><i class="fa-solid fa-trash"></i> Delete</button>
                         </td>
                         </tr>`;
 
@@ -57,14 +58,7 @@ function loadAllCustomers() {
 
     }
 }
-function clearData() {
 
-    $("#txtCustomerID").val("");
-    $("#txtCustomerName").val("");
-    $("#txtCustomerAddress").val("");
-    $("#txtCustomerContact").val("");
-    $("#txtCustomerSalary").val("");
-}
 function searchCustomer(cusID) {
     for (let customer of customers) {
         if (customer.id == cusID) {
@@ -74,6 +68,11 @@ function searchCustomer(cusID) {
 }
 
 $(document).on("click", "#btn-edit", function () {
+
+    bindRowClickEvents();
+});
+
+function bindRowClickEvents() {
     $("#tblCustomer>tr").click(function () {
         let id = $(this).children(":eq(0)").text();
         let name = $(this).children(":eq(1)").text();
@@ -81,17 +80,29 @@ $(document).on("click", "#btn-edit", function () {
         let contact = $(this).children(":eq(3)").text();
         let salary = $(this).children(":eq(4)").text();
 
-    $("#txtCustomerIDEdit").val(id);
-    $("#txtCustomerNameEdit").val(name);
-    $("#txtCustomerAddressEdit").val(address);
-    $("#txtCustomerContactEdit").val(contact);
-    $("#txtCustomerSalaryEdit").val(salary);
+        $("#txtCustomerIDEdit").val(id);
+        $("#txtCustomerNameEdit").val(name);
+        $("#txtCustomerAddressEdit").val(address);
+        $("#txtCustomerContactEdit").val(contact);
+        $("#txtCustomerSalaryEdit").val(salary);
 
-});
+    });
+
+}
+$("#updateCustomer").click(function (){
+    let customerID = $("#txtCustomerIDEdit").val();
+    let message = updateCustomer(customerID);
+    if (message) {
+        alert("Customer Updated Successfully");
+    } else {
+        alert("Update Failed..!");
+
+    }
 });
 
 function updateCustomer(customerID) {
     let customer = searchCustomer(customerID);
+    console.log(customer);
     if (customer != null) {
         customer.id = $("#txtCustomerIDEdit").val();
         customer.name = $("#txtCustomerNameEdit").val();
@@ -106,6 +117,19 @@ function updateCustomer(customerID) {
 
 
 }
-function deleteCustomer(customerID) {
 
+    $("#tblCustomer").on("click", ".delete", function (e) {
+        if (confirm("Are you sure want to delete this record!")) {
+            $(this).closest('tr').remove();
+        } else {
+            e.preventDefault();
+        }
+    });
+function clearData() {
+    $("#txtCustomerID").val("");
+    $("#txtCustomerName").val("");
+    $("#txtCustomerAddress").val("");
+    $("#txtCustomerContact").val("");
+    $("#txtCustomerSalary").val("");
 }
+
