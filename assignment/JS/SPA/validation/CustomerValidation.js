@@ -13,3 +13,8 @@ customerValidations.push({reg: cusAddressRegEx, field: $('#txtCustomerAddress'),
 customerValidations.push({reg: cusContactRegEx, field: $('#txtCustomerContact'),error:'Customer Contact Pattern is Wrong : 0-9 ,/'});
 customerValidations.push({reg: cusSalaryRegEx, field: $('#txtCustomerSalary'),error:'Customer Salary Pattern is Wrong : 100 or 100.00'});
 
+$("#txtCustomerID,#txtCustomerName,#txtCustomerAddress,#txtCustomerContact,#txtCustomerSalary").on('keydown', function (event) {
+    if (event.key == "Tab") {
+        event.preventDefault();
+    }
+});
