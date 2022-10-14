@@ -1,7 +1,7 @@
 function saveItem(itemCode,itemDescription,itemQty,unitPrice){
     return{
         code:itemCode,
-        name:itemDescription,
+        itemName:itemDescription,
         qty:itemQty,
         unitPrice:unitPrice
     };

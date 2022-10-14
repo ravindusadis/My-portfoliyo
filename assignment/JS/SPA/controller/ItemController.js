@@ -23,7 +23,7 @@ function loadAllItems() {
                         <td><button class="btn btn-warning btn-mini" data-bs-target="#editItems"
                        data-bs-toggle="modal" id="btn-editItem"><i class="fa-solid fa-pen-to-square"></i> Edit
                         </button>
-                        <button class="btn btn-danger btn-mini delete-item"><i class="fa-solid fa-trash"></i> Delete</button>
+                        
                         </td>
                     </tr>`;
         $("#tblItem").append(all);
@@ -51,6 +51,8 @@ function bindRowClickEventTable() {
         $("#txtItemNameEdit").val(itemName);
         $("#txtItemQtyEdit").val(qty);
         $("#txtItemUnitPriceEdit").val(unitPrice);
+
+        $("#txtItemCode").val(code);
 
     });
 }
@@ -81,14 +83,39 @@ function updateItem(itemCode) {
     }
 }
 
-$("#tblItem").on("click", ".delete-item", function (){
-    if (confirm("Are you sure want to delete this record!")) {
-        $(this).closest('tr').remove();
-    } else {
-        alert("No such item to delete.");
-    }
 
+
+$("#delete-item").click(function () {
+    let deleteCode = $("#txtItemCode").val();
+
+    let option = confirm("Do you really want to delete " + deleteCode);
+
+    if (option) {
+        if (deleteItem(deleteCode)) {
+            alert("Item Successfully Deleted..");
+            clearData();
+        } else {
+            alert("No such Item to delete. please check the id");
+        }
+    }
 });
+
+function deleteItem(code) {
+    let item = searchItem(code);
+
+    if (item != null) {
+        let IndexNumber = items.indexOf(item);
+        items.splice(IndexNumber, 1);
+        loadAllItems();
+        bindRowClickEventTable();
+        return true;
+
+    } else {
+        return false;
+    }
+}
+
+
 function clearItemData() {
     $("#txtItemCode").val("");
     $("#txtItemName").val("");

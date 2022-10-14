@@ -350,7 +350,7 @@
                     <img src="assests/image/plus.png" width="26px" >
                     Add Customer
                 </button>
-                <button type="button" class="btn btn-secondary view-cuss">View All Customer</button>
+                <button type="button" class="btn btn-secondary delete-cus" id="delete">Delete Customer</button>
             </div>
         </section>
 
@@ -494,7 +494,7 @@
                     <img src="assests/image/plus.png" width="20px" >
                     Add Item
                 </button>
-                <button type="button" class="btn btn-secondary view-cuss">
+                <button type="button" class="btn btn-secondary" id="delete-item">Delete Item</button>
                     View All Item
                 </button>
             </div>
@@ -629,6 +629,20 @@
                         <div class="row">
                             <div class="col-6">
                                 <div class="form-group">
+                                    <label>Order ID</label>
+                                    <input class="form-control" id="orderID" type="text">
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label>Date</label>
+                                    <input class="form-control" id="txtOrderDate" type="date">
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="form-group">
                                     <label>Customer Id</label>
                                     <select class="form-select" id="selectCustomerID">
 
@@ -680,7 +694,7 @@
                                 </div>
                             </div>
                             <div class="add-button">
-                                <button type="button" class="btn btn-primary col-12 col-sm-auto" id="addItem">Add Item</button>
+                                <button type="button" class="btn btn-primary col-12 col-sm-auto" id="addItem">Add To Cart</button>
                             </div>
 
                         </div>
@@ -714,27 +728,7 @@
                                 </div>
                             </div>
 
-                        </div>
 
-                        <div class="col-6 mt-2">
-                            <div class="form-group">
-                                <label>Cash</label>
-                                <input class="form-control" id="txtCash" min="0" type="number">
-                                <span class="control-error"
-                                      id="cash-empty-error"></span>
-                            </div>
-                        </div>
-                        <div class="col-6 mt-2">
-                            <div class="form-group">
-                                <label>Discount</label>
-                                <input class="form-control" id="txtDiscount" min="0" type="number">
-                            </div>
-                        </div>
-                        <div class="col-8">
-                            <div class="form-group">
-                                <label>Balance</label>
-                                <input class="form-control" id="txtBalance" type="text">
-                            </div>
                         </div>
                         <div class="col-4 mt-4">
                             <button class="btn btn-success" id="btnSubmitOrder" type="button">Purchase</button>
@@ -749,6 +743,7 @@
                 <table class="table table-bordered">
                     <thead class="bg-danger text-white">
                     <tr style="background-color:  #A8ACF6" >
+                        <th>Id</th>
                         <th>Code</th>
                         <th>Description</th>
                         <th>Unit Prince</th>

@@ -1,3 +1,7 @@
+$(document).ready(function (){
+    generateOrderID();
+});
+
 function loadAllCustomersForOption() {
 
 }   $("#selectCustomerID").empty();
@@ -24,7 +28,7 @@ $("#selectItemCode").click(function (){
     $("#qtyOnHand").val(search.qty);
     $("#unitPrice").val(search.unitPrice);
 });
-$("#addItem").click(function (message){
+$("#addItem").click(function (){
     let cusId = $("#selectCustomerID").val();
     let cusName = $("#orderCustomerName").val();
     let itemCode = $("#selectItemCode").val();
@@ -37,8 +41,9 @@ $("#addItem").click(function (message){
 
     orders.push(order);
 
-    clearOrderData();
+
     loadAllOrder();
+    clearOrderData();
     itemQtyLoad(itemCode, qty);
 
 });
@@ -49,7 +54,8 @@ function loadAllOrder() {
     for (var order of orders){
         let total = order.qty * order.price;
         $("#total").text(total);
-        var all = `<tr><td>${order.code}</td><td>${order.itemName}</td><td>${order.price}</td><td>${order.qty}</td><td>${total}</td>
+        $("#subtotal").text(total);
+        var all = `<tr><td>${order.id}</td><td>${order.code}</td><td>${order.itemName}</td><td>${order.price}</td><td>${order.qty}</td><td>${total}</td>
                         <td>
                        <button class="btn btn-danger btn-mini delete-order"><i class="fa-solid fa-trash"></i> Delete</button>
                         </td>
@@ -72,6 +78,7 @@ function itemQtyLoad(ItemCode, Qty) {
 $("#tblOrder").on("click", ".delete-order", function (){
     if (confirm("Are you sure want to delete this record!")) {
         $(this).closest('tr').remove();
+        loadAllOrder();
     } else {
         alert("No such item to delete.");
     }
@@ -86,4 +93,32 @@ function clearOrderData() {
     $("#qtyOnHand").val("");
     $("#unitPrice").val("");
     $("#qty").val("")
+
 }
+
+$("#btnSubmitOrder").click(function (){
+    let oId = $("#orderID").val();
+    let date = $("#txtOrderDate").val();
+    let id = $("#tblOrder>tr").children(":eq(0)").text();
+    let code = $("#tblOrder>tr").children(":eq(1)").text();
+    let unitPrice = $("#tblOrder>tr").children(":eq(3)").text();
+    let qty = $("#tblOrder>tr").children(":eq(4)").text();
+    let total = $("#tblOrder>tr").children(":eq(5)").text();
+
+    let orderDetailAll = orderDetail(oId,date,id,code,unitPrice,qty,total);
+    orderDetails.push(orderDetailAll);
+
+});
+
+function generateOrderID() {
+    $("#orderID").val("OID-001");
+}
+
+function date(){
+    let date = new Date();
+    let value = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`
+    $("#txtDate").text(value);
+
+
+}
+
