@@ -12,7 +12,7 @@ Mock-up URL  -https://www.figma.com/file/SYIXFmnhXnmQmA3MsmB6W9/Untitled?node-id
 
 
 
-#POS-System
+# POS-System
 
 
 wireframe-https://wireframe.cc/eQsSlV
