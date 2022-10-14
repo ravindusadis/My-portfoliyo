@@ -56,9 +56,7 @@ function loadAllOrder() {
         $("#total").text(total);
         $("#subtotal").text(total);
         var all = `<tr><td>${order.id}</td><td>${order.code}</td><td>${order.itemName}</td><td>${order.price}</td><td>${order.qty}</td><td>${total}</td>
-                        <td>
-                       <button class="btn btn-danger btn-mini delete-order"><i class="fa-solid fa-trash"></i> Delete</button>
-                        </td>
+                       
                     </tr>`;
         $("#tblOrder").append(all);
     }
@@ -118,6 +116,15 @@ function date(){
     let date = new Date();
     let value = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`
     $("#txtDate").text(value);
+
+}
+
+function remove(){
+    $("#tblOrder>tr").children(":eq(0)").text().remove();
+    $("#tblOrder>tr").children(":eq(1)").text().remove();
+    $("#tblOrder>tr").children(":eq(3)").text().remove();
+    $("#tblOrder>tr").children(":eq(4)").text().remove();
+    $("#tblOrder>tr").children(":eq(5)").text().remove();
 
 
 }
