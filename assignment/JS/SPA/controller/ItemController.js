@@ -58,7 +58,7 @@ function bindRowClickEventTable() {
 }
 
 $("#updateItem").click(function (){
-    let itemCode =  $("#txtItemCodeEdit").val(code);
+    let itemCode =  $("#txtItemCodeEdit").val();
     let message = updateItem(itemCode);
     if (message){
         alert("Item Update Successfully");
@@ -66,7 +66,6 @@ $("#updateItem").click(function (){
         alert("Update Failed..!");
     }
 });
-
 
 function updateItem(itemCode) {
     let item = searchItem(itemCode);
@@ -82,8 +81,6 @@ function updateItem(itemCode) {
         return false;
     }
 }
-
-
 
 $("#delete-item").click(function () {
     let deleteCode = $("#txtItemCode").val();

@@ -348,7 +348,7 @@
                 <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
             <div class="add">
-                <button type="button" class="btn btn-secondary add-cus"  data-bs-target="#exampleModal "
+                <button type="button" class="btn btn-secondary add-cus" data-bs-target="#saveCustomers"
                         data-bs-toggle="modal">
                     <img src="assests/image/plus.png" width="26px" >
                     Add Customer
@@ -492,7 +492,7 @@
                 <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
             <div class="add">
-                <button type="button" class="btn btn-secondary add-cus"  data-bs-target="#exampleModal "
+                <button type="button" class="btn btn-secondary add-cus" data-bs-target="#saveItems"
                         data-bs-toggle="modal">
                     <img src="assests/image/plus.png" width="20px" >
                     Add Item
@@ -672,7 +672,7 @@
                             <div class="col-6">
                                 <div class="form-group">
                                     <label>Item Description</label>
-                                    <input class="form-control" id="ItemDescription" type="text">
+                                    <input class="form-control" id="itemDescription" type="text">
                                 </div>
                             </div>
 
@@ -696,8 +696,10 @@
                                     <input class="form-control" id="qty" type="text">
                                 </div>
                             </div>
+
                             <div class="add-button">
                                 <button type="button" class="btn btn-primary col-12 col-sm-auto" id="addItem">Add To Cart</button>
+                                <button type="button" class="btn btn-primary col-12 col-sm-auto" id="update">Update</button>
                             </div>
 
                         </div>
@@ -742,17 +744,16 @@
         </div>
 
         <section class="order-table">
-            <div div class="col-md-12 mt-4" style="height:280px; overflow-y: scroll">
+            <div div class="col-md-12 mt-4" style="height:330px; overflow-y: scroll">
                 <table class="table table-bordered">
                     <thead class="bg-danger text-white">
-                    <tr style="background-color:  #A8ACF6" >
+                    <tr>
                         <th>Id</th>
                         <th>Code</th>
                         <th>Description</th>
                         <th>Unit Prince</th>
                         <th>Qty</th>
                         <th>Total</th>
-
                     </tr>
                     </thead>
                     <tbody id="tblOrder">
@@ -811,6 +812,7 @@
 <script src="controller/CustomerController.js"></script>
 <script src="controller/ItemController.js"></script>
 <script src="controller/PurchaseOrderController.js"></script>
+<script src="controller/OrderDetailController.js"></script>
 
 
 
