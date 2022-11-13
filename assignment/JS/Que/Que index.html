@@ -29,5 +29,38 @@
 
   </div>
 </section>
+<script src="assets/js/jquery-3.6.1.min.js"></script>
+<script>
+  var QueData = {
+    persons:[
+      {name:"Irudika",color:"red"},
+      {name:"Piumi",color:"green"},
+      {name:"Kamal",color:"orange"}
+    ],
+    nextPerson:function (){
+      var lastPerson = this.persons.pop();
+      this.persons.unshift(lastPerson);
+    }
+  }
+
+  setData();
+  function setData(){
+    $(".que-list").empty();
+    for (let i=0; i<QueData.persons.length;i++){
+      $(".que-list").append(`<div style="background-color: ${QueData.persons[i].color}"><h1>${QueData.persons[i].name}</h1></div>`);
+    }
+    QueData.nextPerson();
+  }
+
+  setInterval(setData,1000);
+
+  $("#btnQue").click(function (){
+    let inputName= $("#input-name").val();
+    let selectedColor= $("#input-color").val();
+    var person={name:inputName,color:selectedColor};
+    QueData .persons.unshift(person);
+  });
+</script>
+
 </body>
 </html>
