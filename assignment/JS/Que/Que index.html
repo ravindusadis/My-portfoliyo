@@ -11,7 +11,53 @@
     }
 
     body {
-      background-color: #283747;
+      background-color:white;
+    }
+    body>section{
+      width: 600px;
+      height: 700px;
+      background-color: #B4977C;
+      position: absolute;
+      top: 47px;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      margin: auto;
+    }
+    #input-name, #input-color{
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-sizing: border-box;
+      margin-top: 20px;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
+    .form-container button{
+      background-color:#59412B;
+      color: white;
+      text-decoration: none;
+      border: 2px solid transparent;
+      font-weight: bold;
+      padding: 10px 35px;
+      border-radius: 20px;
+      transition: .4s;
+    }
+    #input-color{
+      height: 45px;
+    }
+    .que-list>div{
+      width: 150px;
+      height: 100px;
+      border: 2px solid black;
+      display: inline-block;
+      margin-top: 32px;
+      margin-left: 32px;
+    }
+    .que-list>div>h1 {
+      margin-left: 30px;
+      margin-top: 30px;
     }
   </style>
 </head>
@@ -33,8 +79,8 @@
 <script>
   var QueData = {
     persons:[
-      {name:"Irudika",color:"red"},
-      {name:"Piumi",color:"green"},
+      {name:"Ravindu",color:"red"},
+      {name:"Piumi",color:"blue"},
       {name:"Kamal",color:"orange"}
     ],
     nextPerson:function (){
