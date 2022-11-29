@@ -151,7 +151,26 @@ window.addEventListener('load',function (){
             //ammo
             for (let  i =0;i<this.game.ammo;i++){
                 context.fillRect(20 +5 * i,50,3,20);
-
+            }
+            //timer
+            const  fomattedtime = (this.game.gameTime * 0.001).toFixed(1);
+            context.fillText('Timer: ' + fomattedtime,20,100);
+            //game over masseage
+            if(this.game.gameOver){
+                context.textAlign = 'center';
+                let message1;
+                let message2;
+                if (this.game.score >this.game.winningScore){
+                    message1 = 'You Win!';
+                    message2 = 'Well Done!';
+                }else {
+                    message1 = 'you Lost!';
+                    message2 = 'Try Again!';
+                }
+                context.font ='50px' + this.fontFamily
+                context.fillText(message1,this.game.width *0.5,this.game.height * 0.5 - 40);
+                context.font ='25px' + this.fontFamily
+                context.fillText(message2,this.game.width *0.5,this.game.height * 0.5 +40);
             }
             context.restore();
         }
@@ -176,9 +195,13 @@ window.addEventListener('load',function (){
             this.gameOver =false;
             this.score =0;
             this.winningScore = 10;
+            this.gameTime =0;
+            this.timeLimit = 5000;
 
         }
         update(deltaTime){
+            if (!this.gameOver)this.gameTime +=deltaTime;
+            if (this.gameTime >this.timeLimit)this.gameOver =true;
             this.player.update();
             if (this.ammotimer >this.ammoInterval){
                 if (this.ammo< this.maxAmmo)this.ammo++;
@@ -197,7 +220,7 @@ window.addEventListener('load',function (){
                         projectile.markedForDelection =true;
                         if (enemy.lives <= 0){
                             enemy.markedForDelection =true;
-                            this.score+= enemy.score;
+                            if (this.gameOver)this.score+= enemy.score;
                             if (this.score > this.winningScore)this.gameOver =true;
 
                         }
