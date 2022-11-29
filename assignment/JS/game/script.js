@@ -92,7 +92,31 @@ window.addEventListener('load',function (){
 
 
     }
+    //super class
     class Enemy{
+        constructor(game) {
+            this.game =game;
+            this.x =this.game.width;
+            this.speedX =Math.random() * -1.5 -0.5;
+            this.markedForDelection =false;
+        }
+        update(){
+            this.x += this.speedX;
+            if (this.x + this.width < 0) this.markedForDelection =true;
+        }
+        draw(context){
+            context.fillStyle ='red';
+            context.fillRect(this.x,this.y,this.width,this.height);
+        }
+    }
+    //sub class
+    class Ang1 extends Enemy{
+        constructor(game) {
+            super(game);
+            this.width =228 * 0.2;
+            this.height =169 *0.2;
+            this.y =Math.random()*(this.game.height * 0.9 - this.height);
+        }
 
     }
     class layer{
@@ -128,10 +152,14 @@ window.addEventListener('load',function (){
             this.input =new InputHandler(this)
             this.ui =new UI(this)
             this.keys =[];
+            this.enemies = [];
+            this.enemytimer = 0;
+            this.enemyInterval =1000;
             this.ammo =20;
             this.maxAmmo =50;
             this.ammotimer =0;
             this.ammoInterval =500;
+            this.gameOver =false
 
         }
         update(deltaTime){
@@ -142,10 +170,26 @@ window.addEventListener('load',function (){
             }else {
                 this.ammotimer += deltaTime;
             }
+            this.enemies.forEach(enemy =>{
+                enemy.update();
+                });
+            this.enemies = this.enemies.filter(enemy => !enemy.markedForDelection);
+            if (this.enemytimer > this.enemyInterval && !this.gameOver){
+                this.addEnemy();
+                this.enemytimer =0;
+            }else {
+                this.enemytimer += deltaTime;
+            }
         }
         draw(context){
             this.player.draw(context);
             this.ui.draw(context)
+            this.enemies.forEach(enemy =>{
+                enemy.draw(context);
+            });
+        }
+        addEnemy(){
+            this.enemies.push(new Ang1(this));
         }
 
     }
