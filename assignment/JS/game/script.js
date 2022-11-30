@@ -1,7 +1,7 @@
 window.addEventListener('load',function (){
     const canvas =document.getElementById('canvas1');
     const ctx =canvas.getContext("2d");
-    canvas.width =500;
+    canvas.width =1000;
     canvas.height =500;
 
     class InputHandler{
@@ -9,11 +9,13 @@ window.addEventListener('load',function (){
             this.game =game;
             window.addEventListener('keydown',e => {
                 if ((  (e.key === 'ArrowUp') ||
-                       (e.key === 'ArrowDown')
+                    (e.key === 'ArrowDown')
                 ) && this.game.keys.indexOf(e.key) === -1){
                     this.game.keys.push(e.key);
                 } else if (e.key === ' '){
                     this.game.player.shootTop();
+                }else if (e.key === 'd'){
+                    this.game.debug =!this.game.debug;
                 }
 
             });
@@ -35,6 +37,7 @@ window.addEventListener('load',function (){
             this.height = 3;
             this.speed = 3;
             this.markedForDelection = false;
+            this.image =document.getElementById('projecties');
 
         }
         update(){
@@ -42,8 +45,7 @@ window.addEventListener('load',function (){
             if (this.x > this.game.width * 0.8)this.markedForDelection = true;
         }
         draw(context){
-            context.fillStyle = 'yellow';
-            context.fillRect(this.x,this.y,this.width,this.height)
+            context.drawImage(this.image,this.x,this.y);
         }
 
     }
@@ -60,26 +62,29 @@ window.addEventListener('load',function (){
             this.frameX =0;
             this.frameY =0;
             this.speedY =0;
-           this.maxSpeed = 3;
-           this.projectiles =[];
-           this.image =document.getElementById('player');
+            this.maxSpeed = 3;
+            this.projectiles =[];
+            this.image =document.getElementById('player');
         }
         update(){
             if (this.game.keys.includes('ArrowUp'))this.speedY = -this.maxSpeed;
             else if (this.game.keys.includes('ArrowDown'))this.speedY =this.maxSpeed;
             else this.speedY =0;
             this.y +=this.speedY;
+            //vertical boundaries
+            if (this.y >this.game.height - this.height * 0.5) this.y = this.game.height - this.height * 0.5;
+            else if (this.y < -this.height * 0.5)this.y = -this.height*0.5;
             //handle projectiles
 
             this.projectiles.forEach(projectile =>{
                 projectile.update();
 
-                });
+            });
             this.projectiles =this.projectiles.filter(projectile =>!projectile.markedForDelection);
         }
         draw(context){
-            context.fillStyle = 'black';
-            context.fillRect(this.x,this.y,this.width,this.height);
+
+            if (this.game.debug)context.strokeRect(this.x,this.y,this.width,this.height);
             context.drawImage(this.image,this.frameX * this.width,this.frameY *this.height,this.width,this.height,this.x,this.y,this.width,this.height);
             this.projectiles.forEach(projectile => {
                 projectile.draw(context);
@@ -103,28 +108,61 @@ window.addEventListener('load',function (){
             this.x =this.game.width;
             this.speedX =Math.random() * -1.5 -0.5;
             this.markedForDelection =false;
-            this.lives = 5;
-            this.score = this.lives
+            this.frameX =0;
+            this.frameY =0;
         }
         update(){
-            this.x += this.speedX;
+            this.x += this.speedX - this.game.speed;
             if (this.x + this.width < 0) this.markedForDelection =true;
         }
         draw(context){
-            context.fillStyle ='red';
-            context.fillRect(this.x,this.y,this.width,this.height);
-            context.fillStyle ='black';
-            context.font ='20px Helvetica';
-            context.fillText(this.lives, this.x,this.y);
+            if (this.game.debug) context.strokeRect(this.x,this.y,this.width,this.height);
+            context.drawImage(this.image,this.frameX * this.width,this.frameY *this.height,this.width,this.height,this.x,this.y,this.width,this.height);
+            if (this.game.debug){
+                context.font ='20px Bangers';
+                context.fillText(this.lives, this.x,this.y);
+            }
         }
     }
     //sub class
     class Ang1 extends Enemy{
         constructor(game) {
             super(game);
-            this.width =228 * 0.2;
-            this.height =169 *0.2;
-            this.y =Math.random()*(this.game.height * 0.9 - this.height);
+            this.width =228 ;
+            this.height =169 ;
+            this.y =Math.random()*(this.game.height * 0.95 - this.height);
+            this.image =document.getElementById('Ang1');
+            this.frameY =Math.floor(Math.random()*3);
+            this.lives = 5;
+            this.score = this.lives
+        }
+
+    }
+    class Ang2 extends Enemy{
+        constructor(game) {
+            super(game);
+            this.width =213 ;
+            this.height =165 ;
+            this.y =Math.random()*(this.game.height * 0.95 - this.height);
+            this.image =document.getElementById('Ang2');
+            this.frameY =Math.floor(Math.random()*2);
+            this.lives = 5;
+            this.score = this.lives;
+        }
+
+    }
+    class Hivawhale extends Enemy{
+        constructor(game) {
+            super(game);
+            this.width =400 ;
+            this.height =230 ;
+            this.y =Math.random()*(this.game.height * 0.95 - this.height);
+            this.image =document.getElementById('hivawhale1');
+            this.frameY =0;
+            this.lives = 15;
+            this.score = this.lives;
+            this.type = 'hive';
+            this.speedX =Math.random() * -1.2 -0.2;
         }
 
     }
@@ -140,7 +178,7 @@ window.addEventListener('load',function (){
         }
         update(){
             if (this.x <= - this.width)this.x =0;
-             this.x -=this.game.speed * this.speedModifier;
+            this.x -=this.game.speed * this.speedModifier;
         }
         draw(context){
             context.drawImage(this.image,this.x,this.y);
@@ -172,11 +210,46 @@ window.addEventListener('load',function (){
 
         }
     }
+    class  Explosion{
+        constructor(game,x,y) {
+            this.game = game;
+            this.frameX =0;
+            this.spriteHeight =200;
+            this.fps =15;
+            this.timer =0;
+            this.interval = 1000/this.fps;
+            this.markedForDeletion = false;
+            this.maxframe =8;
+        }
+        update(deltaTime){
+            this.frameX++;
+
+        }
+        draw(context){
+            context.drawImage(this.image,this.x,this.y);
+
+        }
+    }
+    class Smoke extends  Explosion{
+        constructor(game,x,y) {
+            super();
+            this.image =document.getElementById('smoke');
+            this.spriteWidth =200;
+            this.width =this.spriteWidth;
+            this.height =this.spriteHeight;
+            this.x = x - this.width * 0.5;
+            this.y =y - this.height * 0.5;
+        }
+
+    }
+    class fire extends  Explosion{
+
+    }
     class UI{
         constructor(game) {
             this.game =game;
             this.fontSize =25;
-            this.fontFamily = 'Helvetica';
+            this.fontFamily = 'Bangers';
             this.color = 'white';
 
         }
@@ -209,9 +282,9 @@ window.addEventListener('load',function (){
                     message1 = 'you Lost!';
                     message2 = 'Try Again!';
                 }
-                context.font ='50px' + this.fontFamily
+                context.font ='150px' + this.fontFamily
                 context.fillText(message1,this.game.width *0.5,this.game.height * 0.5 - 40);
-                context.font ='25px' + this.fontFamily
+                context.font ='50px' + this.fontFamily
                 context.fillText(message2,this.game.width *0.5,this.game.height * 0.5 +40);
             }
             context.restore();
@@ -229,6 +302,7 @@ window.addEventListener('load',function (){
             this.ui =new UI(this);
             this.keys =[];
             this.enemies = [];
+            this.explosions = [];
             this.enemytimer = 0;
             this.enemyInterval =1000;
             this.ammo =20;
@@ -239,8 +313,9 @@ window.addEventListener('load',function (){
             this.score =0;
             this.winningScore = 10;
             this.gameTime =0;
-            this.timeLimit = 5000;
+            this.timeLimit = 15000;
             this.speed =1;
+            this.debug =false;
 
         }
         update(deltaTime){
@@ -254,6 +329,8 @@ window.addEventListener('load',function (){
             }else {
                 this.ammotimer += deltaTime;
             }
+            this.explosions.forEach(explosion => explosion.update());
+            this.explosions = this.explosions.filter(explosion =>!explosion.markedForDelection);
             this.enemies.forEach(enemy =>{
                 enemy.update();
                 if (this.checkCollision(this. player,enemy)){
@@ -271,7 +348,7 @@ window.addEventListener('load',function (){
                         }
                     }
                 })
-                });
+            });
             this.enemies = this.enemies.filter(enemy => !enemy.markedForDelection);
             if (this.enemytimer > this.enemyInterval && !this.gameOver){
                 this.addEnemy();
@@ -282,21 +359,27 @@ window.addEventListener('load',function (){
         }
         draw(context){
             this.background.draw(context);
-            this.player.draw(context);
             this.ui.draw(context)
+            this.player.draw(context);
             this.enemies.forEach(enemy =>{
                 enemy.draw(context);
             });
+            this.explosions.forEach(explosion =>{
+                explosion.draw(context);
+            });
         }
         addEnemy(){
-            this.enemies.push(new Ang1(this));
-            console.log(this.enemies);
+            const randomize =Math.random();
+            if (randomize< 0.3)this.enemies.push(new Ang1(this));
+            else if (randomize< 0.6)this.enemies.push(new Ang2(this));
+            else if (randomize< 0.8)this.enemies.push(new Hivawhale(this));
+
         }
         checkCollision(rect1,rect2){
             return(    rect1.x <rect2.x + rect2.width &&
-                       rect1.x + rect1.width > rect2.x &&
-                       rect1.y < rect2.y + rect2.height &&
-                       rect1.height + rect1.y > rect2.y)
+                rect1.x + rect1.width > rect2.x &&
+                rect1.y < rect2.y + rect2.height &&
+                rect1.height + rect1.y > rect2.y)
         }
 
     }
@@ -308,7 +391,7 @@ window.addEventListener('load',function (){
         const deltaTime = timeStamp -lastTime;
         lastTime =timeStamp;
         ctx.clearRect(0,0,canvas.width,canvas.height),
-        game.update(deltaTime);
+            game.update(deltaTime);
         game.draw(ctx);
         requestAnimationFrame(animate);
 
